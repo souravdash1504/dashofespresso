@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="800" viewBox="0 0 700 800" role="img" aria-label="Illustrated classic affogato coffee">
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#e9d5b2"/><stop offset="1" stop-color="#a78162"/></linearGradient>
+  <radialGradient id="sun"><stop stop-color="#fff8e9" stop-opacity=".78"/><stop offset="1" stop-color="#fff8e9" stop-opacity="0"/></radialGradient>
+  <linearGradient id="glass" x2="1"><stop stop-color="#fff9ea" stop-opacity=".38"/><stop offset=".47" stop-color="#fff9ea" stop-opacity=".06"/><stop offset="1" stop-color="#fff9ea" stop-opacity=".36"/></linearGradient>
+  <filter id="blur" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="24"/></filter>
+  <clipPath id="drink"><path d="M234 305 L472 305 L453 618 Q449 650 415 657 L291 657 Q257 649 255 618 Z"/></clipPath>
+</defs>
+<rect width="700" height="800" fill="url(#bg)"/>
+<circle cx="335" cy="255" r="348" fill="url(#sun)"/>
+<circle cx="584" cy="119" r="235" fill="#fff7ef" opacity=".085"/>
+<circle cx="101" cy="780" r="250" fill="#1f100b" opacity=".09"/>
+<path d="M-30 702 C190 636 473 671 730 609 V810 H-30Z" fill="#5a3925" opacity=".15"/>
+<ellipse cx="351" cy="660" rx="212" ry="35" fill="#150b08" opacity=".22" filter="url(#blur)"/>
+<ellipse cx="345" cy="518" rx="154" ry="35" fill="#27150d" opacity=".17"/>
+<path d="M218 389 Q213 523 296 555 H413 Q492 529 489 389" fill="#fffaf0" opacity=".39" stroke="#fff9ed" stroke-width="13"/>
+<path d="M233 436 Q267 541 351 540 Q446 536 475 435 Q423 464 353 456 Q284 458 233 436Z" fill="#4e281c" opacity=".78"/>
+<path d="M313 544 H394 L388 602 L418 619 H286 L319 602Z" fill="#fff4e4" opacity=".46" stroke="#f3e5d0" stroke-width="6"/>
+<ellipse cx="352" cy="619" rx="134" ry="19" fill="#fff1df" opacity=".69"/>
+<g stroke="#ead2a9" stroke-width="5">
+  <circle cx="292" cy="399" r="66" fill="#f6dfac"/>
+  <circle cx="399" cy="395" r="67" fill="#f4ddb1"/>
+  <circle cx="346" cy="342" r="72" fill="#fff0c9"/>
+</g>
+<path d="M266 392 Q284 369 304 388 M364 321 Q349 307 325 319 M408 384 Q432 366 439 401" fill="none" stroke="#fff8df" stroke-width="9" stroke-linecap="round" opacity=".72"/>
+<path d="M255 436 Q326 464 375 441 T462 435" fill="none" stroke="#6e3a23" stroke-width="13" stroke-linecap="round" opacity=".82"/>
+<path d="M435 258 Q464 301 427 357" fill="none" stroke="#62361f" stroke-width="15" stroke-linecap="round"/>
+<path d="M428 352 Q408 363 415 385" fill="none" stroke="#6d3d24" stroke-width="10" stroke-linecap="round"/><circle cx="280" cy="367" r="3" fill="#5b321f" opacity=".75"/><circle cx="334" cy="341" r="2" fill="#5b321f" opacity=".75"/><circle cx="386" cy="349" r="3" fill="#5b321f" opacity=".75"/><circle cx="428" cy="405" r="2" fill="#5b321f" opacity=".75"/><circle cx="308" cy="425" r="3" fill="#5b321f" opacity=".75"/><circle cx="366" cy="395" r="2" fill="#5b321f" opacity=".75"/>
+<text x="45" y="62" font-size="13" font-family="Arial,sans-serif" letter-spacing="4.1" fill="#5a3925" opacity=".64">DASH OF ESPRESSO</text>
+<g transform="translate(614 50)"><circle r="25" fill="none" stroke="#5a3925" opacity=".38"/><path d="M-12 0 H12 M0 -12 V12 M-8 -8 L8 8 M-8 8 L8 -8" stroke="#5a3925" stroke-width="1.6" opacity=".75"/></g>
+</svg>

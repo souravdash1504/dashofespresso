@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="800" viewBox="0 0 700 800" role="img" aria-label="Illustrated fridge cigarette coffee">
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#d7c5ac"/><stop offset="1" stop-color="#5c463f"/></linearGradient>
+  <radialGradient id="sun"><stop stop-color="#fff8e9" stop-opacity=".78"/><stop offset="1" stop-color="#fff8e9" stop-opacity="0"/></radialGradient>
+  <linearGradient id="glass" x2="1"><stop stop-color="#fff9ea" stop-opacity=".38"/><stop offset=".47" stop-color="#fff9ea" stop-opacity=".06"/><stop offset="1" stop-color="#fff9ea" stop-opacity=".36"/></linearGradient>
+  <filter id="blur" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="24"/></filter>
+  <clipPath id="drink"><path d="M234 305 L472 305 L453 618 Q449 650 415 657 L291 657 Q257 649 255 618 Z"/></clipPath>
+</defs>
+<rect width="700" height="800" fill="url(#bg)"/>
+<circle cx="335" cy="255" r="348" fill="url(#sun)"/>
+<circle cx="584" cy="119" r="235" fill="#fff7ef" opacity=".085"/>
+<circle cx="101" cy="780" r="250" fill="#1f100b" opacity=".09"/>
+<path d="M-30 702 C190 636 473 671 730 609 V810 H-30Z" fill="#34231f" opacity=".15"/>
+<ellipse cx="351" cy="660" rx="212" ry="35" fill="#150b08" opacity=".22" filter="url(#blur)"/>
+<ellipse cx="355" cy="668" rx="170" ry="24" fill="#160e0a" opacity=".2"/>
+<path d="M229 294 Q222 300 229 360 L246 611 Q249 658 289 667 H417 Q456 659 458 611 L478 358 Q485 294 474 294 Z" fill="#f9f4e9" opacity=".48" stroke="#fff9ed" stroke-width="12"/>
+<g clip-path="url(#drink)"><rect x="230" y="300" width="250" height="359" fill="#261916"/>
+<path d="M233 360 Q354 376 472 339 V304 H229Z" fill="#45281f"/>
+<path d="M240 475 Q356 494 462 470" stroke="#b68159" stroke-width="8" fill="none" opacity=".42"/>
+<g fill="#ecdcc8" opacity=".45"><circle cx="282" cy="432" r="4"/><circle cx="450" cy="485" r="3"/><circle cx="340" cy="543" r="5"/><circle cx="397" cy="616" r="3"/></g><rect x="272" y="370" width="48" height="43" rx="8" transform="rotate(-16 296 392)" fill="#fffdf2" opacity=".19" stroke="#fff9ef" stroke-width="6"/><rect x="395" y="391" width="48" height="43" rx="8" transform="rotate(17 419 413)" fill="#fffdf2" opacity=".19" stroke="#fff9ef" stroke-width="6"/><rect x="318" y="458" width="48" height="43" rx="8" transform="rotate(-22 342 480)" fill="#fffdf2" opacity=".19" stroke="#fff9ef" stroke-width="6"/><rect x="399" y="522" width="48" height="43" rx="8" transform="rotate(24 423 544)" fill="#fffdf2" opacity=".19" stroke="#fff9ef" stroke-width="6"/><rect x="284" y="549" width="48" height="43" rx="8" transform="rotate(14 308 571)" fill="#fffdf2" opacity=".19" stroke="#fff9ef" stroke-width="6"/></g>
+<path d="M256 337 Q249 410 269 556" fill="none" stroke="#fffbf0" stroke-width="11" stroke-linecap="round" opacity=".44"/>
+<ellipse cx="354" cy="302" rx="126" ry="19" fill="#f9efe5" opacity=".55" stroke="#fff9ec" stroke-width="7"/>
+<path d="M233 304 C230 289 244 286 255 285 Q251 254 285 250 Q289 213 335 221 Q359 199 389 222 Q430 216 438 249 Q470 243 468 277 Q487 293 472 316 Q406 340 353 318 Q291 341 233 304Z" fill="#f8e6cc" stroke="#fff5e4" stroke-width="7"/>
+<path d="M279 267 Q333 239 405 262" stroke="#ffffff" stroke-width="11" fill="none" opacity=".57" stroke-linecap="round"/>
+<path d="M289 300 Q355 319 422 298" stroke="#dec8ad" stroke-width="4" fill="none" opacity=".5"/>
+<text x="45" y="62" font-size="13" font-family="Arial,sans-serif" letter-spacing="4.1" fill="#34231f" opacity=".64">DASH OF ESPRESSO</text>
+<g transform="translate(614 50)"><circle r="25" fill="none" stroke="#34231f" opacity=".38"/><path d="M-12 0 H12 M0 -12 V12 M-8 -8 L8 8 M-8 8 L8 -8" stroke="#34231f" stroke-width="1.6" opacity=".75"/></g>
+</svg>

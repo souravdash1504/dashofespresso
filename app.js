@@ -7,7 +7,7 @@
   const searchInput = $("#searchInput");
   const config = window.COFFEE_BAR_CONFIG || {};
   const state = { drinks: [], category: "All", query: "", activeDrink: null };
-  const categories = ["All", "Iced", "Hot", "Signature", "Fruity"];
+  const categories = ["All", "Iced", "Dessert", "Signature", "Fruity"];
   const imageFallback = "images/coffee-default.svg";
 
   const el = (tag, className, text) => {
@@ -99,7 +99,9 @@
     const ingList = el("ul", "recipe-list"); (drink.ingredients || []).forEach(item => appendText(ingList, "li", item)); panel.append(ingList);
     appendText(panel, "h3", "recipe-subtitle", "How to make it");
     const stepList = el("ol", "recipe-list recipe-steps"); (drink.steps || []).forEach(item => appendText(stepList, "li", item)); panel.append(stepList);
-    appendText(panel, "p", "recipe-disclaimer", "Starter measurements for demonstration — adjust to match your tested recipe before publishing.");
+    if (drink.notes) appendText(panel, "p", "recipe-note", "Barista’s note: " + drink.notes);
+    if ((drink.allergens || []).length) appendText(panel, "p", "recipe-allergens", "Contains: " + drink.allergens.join(", "));
+    appendText(panel, "p", "recipe-disclaimer", "One double-shot espresso is used per coffee. Ice is added to suit the glass; espresso yield may vary by machine.");
     const button = el("button", "button button-dark recipe-order", "I'd love this one ↗");
     button.type = "button"; button.addEventListener("click", () => { closeDialog($("#recipeDialog")); openOrder(drink); });
     panel.append(button); showDialog($("#recipeDialog"));
@@ -108,7 +110,15 @@
     state.activeDrink = drink;
     $("#orderDrinkName").textContent = drink.name;
     $("#orderForm").reset();
-    $("#serving").value = drink.serve && ["250 ml", "300 ml", "325 ml"].includes(drink.serve) ? drink.serve : "300 ml";
+    $("#serving").textContent = drink.serve || "As described";
+    const preference = $("#preference");
+    preference.replaceChildren();
+    const options = drink.id === "classic-affogato"
+      ? ["As in recipe", "Light cocoa dusting", "No cocoa dusting"]
+      : drink.id === "salted-caramel-affogato"
+      ? ["As in recipe", "Less caramel sauce", "Extra caramel sauce (if available)"]
+      : ["As in recipe", "Light ice", "Extra ice", "Less sweet (where possible)"];
+    options.forEach(label => { const option = el("option", "", label); option.value = label; preference.append(option); });
     $("#orderFeedback").textContent = "";
     showDialog($("#orderDialog"));
   }
@@ -118,7 +128,7 @@
     const guest = $("#guestName").value.trim();
     if (!guest) { $("#guestName").focus(); return null; }
     const notes = $("#orderNotes").value.trim();
-    return `☕ COFFEE REQUEST — ${config.cafeName || "Dash of Espresso"}\nName: ${guest}\nDrink: ${state.activeDrink.name}\nServing: ${$("#serving").value}\nSweetness: ${$("#sweetness").value}\nMilk: ${$("#milk").value}\n${notes ? `Note: ${notes}\n` : ""}Please let me know if you can make this!`;
+    return `☕ COFFEE REQUEST — ${config.cafeName || "Dash of Espresso"}\nName: ${guest}\nDrink: ${state.activeDrink.name}\nServing: ${$("#serving").textContent}\nPreference: ${$("#preference").value}\n${notes ? `Note: ${notes}\n` : ""}Please let me know if you can make this!`;
   }
   function feedback(message) { $("#orderFeedback").textContent = message; }
   function initOrdering() {

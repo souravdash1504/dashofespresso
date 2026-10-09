@@ -1,66 +1,121 @@
 [
   {
-    "id": "vietnamese-iced",
-    "name": "Vietnamese Iced Coffee",
+    "id": "fridge-cigarette",
+    "name": "Fridge Cigarette",
     "categories": [
-      "Iced"
+      "Iced",
+      "Signature"
     ],
-    "badge": "Crowd favourite",
-    "serve": "300 ml",
-    "image": "images/vietnamese.svg",
-    "description": "Bold moka brew meets silky condensed milk. Sweet, strong, unforgettable.",
+    "badge": "New · Vanilla cloud",
+    "serve": "Tall iced glass",
+    "image": "images/fridge-cigarette.svg",
+    "description": "Cold Diet Coke, bold espresso and a silky vanilla cloud. Fizzy, creamy, unexpected.",
     "tags": [
-      "condensed milk",
-      "moka",
-      "creamy"
+      "diet coke",
+      "cola",
+      "vanilla",
+      "cloud",
+      "espresso",
+      "fizzy",
+      "iced"
     ],
-    "brewMethod": "Moka pot",
-    "prepTime": "8 min",
-    "strength": "Strong",
+    "brewMethod": "Espresso machine · double shot",
+    "prepTime": "5 min",
+    "strength": "Bold",
     "ingredients": [
-      "18 g freshly ground dark-roast coffee",
-      "About 100 ml water for moka pot (adjust to pot specifications)",
-      "20–25 g sweetened condensed milk",
-      "30–45 ml cold milk, optional",
-      "Ice, to fill a 300 ml glass"
+      "100–120 ml chilled Diet Coke",
+      "1 freshly pulled double-shot espresso (espresso machine)",
+      "Ice, to fill the serving glass",
+      "For the vanilla cloud: 30 ml whipping cream",
+      "For the vanilla cloud: 10 ml milk",
+      "For the vanilla cloud: 10 ml vanilla syrup"
     ],
     "steps": [
-      "Brew a strong concentrate with your moka pot, following its safe fill guidelines.",
-      "Stir the hot coffee with condensed milk until completely smooth.",
-      "Add cold milk if you prefer a softer cup.",
-      "Pour over a full glass of ice and stir once."
+      "Pull one double-shot espresso; allow it to settle briefly while you prepare the glass.",
+      "Whisk or froth the 30 ml whipping cream, 10 ml milk and 10 ml vanilla syrup into a soft, pourable vanilla cloud.",
+      "Add ice to a tall serving glass.",
+      "Pour 100–120 ml chilled Diet Coke over the ice.",
+      "Slowly pour the double-shot espresso over the cola to preserve the layers and limit foaming.",
+      "Gently spoon or pour the vanilla cloud on top, and serve immediately."
+    ],
+    "notes": "Pour slowly: cola can foam when espresso is added. The vanilla syrup already sweetens the cloud.",
+    "allergens": [
+      "Dairy"
     ]
   },
   {
-    "id": "spanish-latte",
-    "name": "Spanish Latte",
+    "id": "classic-affogato",
+    "name": "Classic Affogato",
     "categories": [
-      "Iced"
+      "Dessert"
     ],
-    "badge": "Smooth & sweet",
-    "serve": "300 ml",
-    "image": "images/spanish.svg",
-    "description": "A velvety iced latte with a delicate condensed-milk finish.",
+    "badge": "Dessert classic",
+    "serve": "120–130 ml ice cream + espresso",
+    "image": "images/classic-affogato.svg",
+    "description": "Cold vanilla ice cream melting into a freshly pulled double espresso, finished with cocoa.",
     "tags": [
-      "latte",
-      "milk",
-      "condensed",
-      "sweet"
+      "vanilla",
+      "ice cream",
+      "dessert",
+      "affogato",
+      "cocoa",
+      "espresso"
     ],
-    "brewMethod": "Moka pot",
-    "prepTime": "7 min",
-    "strength": "Medium",
+    "brewMethod": "Espresso machine · double shot",
+    "prepTime": "4 min",
+    "strength": "Rich",
     "ingredients": [
-      "60 ml strong moka coffee",
-      "160 ml chilled milk",
-      "15 g sweetened condensed milk",
-      "Ice, to taste"
+      "120–130 ml vanilla ice cream",
+      "1 freshly pulled double-shot espresso (espresso machine)",
+      "A light dusting of chocolate powder or unsweetened cocoa powder"
     ],
     "steps": [
-      "Stir condensed milk into the warm coffee until dissolved.",
-      "Fill a glass with ice and chilled milk.",
-      "Pour the coffee slowly over the milk for a layered finish.",
-      "Adjust condensed milk to your preferred sweetness."
+      "Scoop 120–130 ml vanilla ice cream into a chilled dessert bowl or small glass.",
+      "Pull one fresh double-shot espresso using your espresso machine.",
+      "Pour the hot espresso directly over the ice cream just before serving.",
+      "Finish with a light dusting of chocolate powder or cocoa. Enjoy immediately."
+    ],
+    "notes": "Serve immediately for the contrast between hot espresso and cold ice cream.",
+    "allergens": [
+      "Dairy"
+    ]
+  },
+  {
+    "id": "salted-caramel-affogato",
+    "name": "Salted Caramel Affogato",
+    "categories": [
+      "Dessert"
+    ],
+    "badge": "Caramel twist",
+    "serve": "120–130 ml ice cream + espresso",
+    "image": "images/salted-caramel-affogato.svg",
+    "description": "Classic vanilla affogato with a generous caramel ribbon and a tiny pinch of salt.",
+    "tags": [
+      "caramel",
+      "salted",
+      "vanilla",
+      "ice cream",
+      "dessert",
+      "affogato"
+    ],
+    "brewMethod": "Espresso machine · double shot",
+    "prepTime": "5 min",
+    "strength": "Rich",
+    "ingredients": [
+      "120–130 ml vanilla ice cream",
+      "1 freshly pulled double-shot espresso (espresso machine)",
+      "20 g caramel sauce",
+      "A small pinch of salt"
+    ],
+    "steps": [
+      "Scoop 120–130 ml vanilla ice cream into a chilled dessert bowl or glass.",
+      "Drizzle 20 g caramel sauce over the ice cream.",
+      "Pull one fresh double-shot espresso and pour it over the dessert.",
+      "Finish with a tiny pinch of salt to make it a salted caramel affogato. Serve immediately."
+    ],
+    "notes": "Use only a small pinch of salt; caramel sauce is already sweet.",
+    "allergens": [
+      "Dairy"
     ]
   },
   {
@@ -71,196 +126,128 @@
       "Signature",
       "Fruity"
     ],
-    "badge": "Signature",
-    "serve": "300 ml",
+    "badge": "Signature favourite",
+    "serve": "300 ml glass",
     "image": "images/jamun.svg",
-    "description": "Jamun fruit, bright citrus and sparkling tonic meet an espresso-style brew.",
+    "description": "Muddled jamun, lime and sparkling tonic meet a fresh double espresso.",
     "tags": [
       "jamun",
+      "black plum",
       "tonic",
       "sparkling",
-      "fruit"
+      "fruit",
+      "lime",
+      "espresso"
     ],
-    "brewMethod": "Moka pot",
-    "prepTime": "10 min",
+    "brewMethod": "Espresso machine · double shot",
+    "prepTime": "8 min",
     "strength": "Medium",
     "ingredients": [
-      "35–45 ml strong moka coffee, cooled slightly",
+      "1 freshly pulled double-shot espresso (espresso machine)",
       "40–50 g ripe jamun, deseeded",
-      "110–130 ml chilled tonic water",
-      "5 ml lime juice",
-      "Ice and a pinch of salt"
+      "120–130 ml chilled tonic water",
+      "5 ml fresh lime juice",
+      "A tiny pinch of salt",
+      "Ice, to fill a 300 ml glass"
     ],
     "steps": [
-      "Muddle deseeded jamun with lime and a tiny pinch of salt.",
-      "Add plenty of ice and slowly pour in chilled tonic.",
-      "Gently float the coffee on top.",
-      "Taste before adding any sweetener; tonic may already be sweet."
-    ]
+      "Deseed 40–50 g ripe jamun and gently muddle it in the serving glass with 5 ml lime juice and a tiny pinch of salt.",
+      "Fill the glass with ice.",
+      "Slowly add 120–130 ml chilled tonic water.",
+      "Pull a fresh double-shot espresso and let it settle briefly.",
+      "Gently pour the espresso over the back of a spoon to create a layered finish; serve immediately."
+    ],
+    "notes": "Adjust tonic slightly for your actual shot yield and the amount of ice in your glass.",
+    "allergens": []
   },
   {
-    "id": "cappuccino",
-    "name": "Classic Cappuccino",
+    "id": "sunrise-americano",
+    "name": "Sunrise Americano",
     "categories": [
-      "Hot"
+      "Iced",
+      "Signature",
+      "Fruity"
     ],
-    "badge": "The classic",
-    "serve": "250 ml",
-    "image": "images/cappuccino.svg",
-    "description": "Deep coffee, creamy steamed milk and a cloud of foam.",
+    "badge": "Citrus sparkle",
+    "serve": "Tall iced glass",
+    "image": "images/sunrise-americano.svg",
+    "description": "Fresh orange, soda and espresso in a bright, sparkling sunrise of a glass.",
     "tags": [
-      "foam",
-      "hot",
-      "milk",
-      "classic"
+      "sunrise",
+      "orange",
+      "juice",
+      "soda",
+      "fizzy",
+      "americano",
+      "citrus"
     ],
-    "brewMethod": "Moka pot",
-    "prepTime": "9 min",
+    "brewMethod": "Espresso machine · double shot",
+    "prepTime": "5 min",
     "strength": "Medium",
     "ingredients": [
-      "60 ml strong moka coffee",
-      "160–180 ml hot milk (adjust for cup size)",
-      "Fine milk foam to finish",
-      "Optional cocoa powder"
+      "80 ml chilled orange juice",
+      "60 ml chilled soda water",
+      "1 freshly pulled double-shot espresso (espresso machine)",
+      "Ice, to fill the glass",
+      "1 fresh orange slice, for garnish"
     ],
     "steps": [
-      "Brew the coffee into a preheated cup.",
-      "Heat milk without letting it boil and froth until velvety.",
-      "Gently pour the milk and foam into the coffee.",
-      "Finish with latte art or a little cocoa if you like."
-    ]
+      "Fill a serving glass with ice.",
+      "Pour in 80 ml chilled orange juice.",
+      "Add 60 ml chilled soda water slowly.",
+      "Pull a double-shot espresso and slowly pour it over the drink for a layered sunrise effect.",
+      "Garnish with a fresh orange slice and serve immediately."
+    ],
+    "notes": "Use cold juice and soda for clearer layers; espresso should be poured slowly.",
+    "allergens": []
   },
   {
-    "id": "honey-latte",
-    "name": "Iced Honey Latte",
+    "id": "dark-chocolate-peanut-butter-latte",
+    "name": "Dark Chocolate Peanut Butter Iced Latte",
     "categories": [
       "Iced",
       "Signature"
     ],
-    "badge": "Lightly sweet",
-    "serve": "300 ml",
-    "image": "images/honey.svg",
-    "description": "Floral honey, smooth milk and punchy coffee. Sweetness, kept in balance.",
+    "badge": "Chocolate cloud",
+    "serve": "Tall iced glass",
+    "image": "images/dark-chocolate-peanut-butter-latte.svg",
+    "description": "Chocolate milk, honey-kissed peanut butter espresso and a fluffy honey cloud.",
     "tags": [
+      "peanut butter",
+      "chocolate",
+      "hersheys",
       "honey",
+      "cream",
       "latte",
-      "milk",
-      "sweet"
+      "cloud"
     ],
-    "brewMethod": "Moka pot",
-    "prepTime": "7 min",
-    "strength": "Medium",
+    "brewMethod": "Espresso machine · double shot",
+    "prepTime": "8 min",
+    "strength": "Rich",
     "ingredients": [
-      "60 ml strong moka coffee",
-      "170 ml chilled milk",
-      "8–10 g honey",
-      "Ice, to taste"
+      "120 ml chilled milk",
+      "2–3 g Hershey’s chocolate powder, to make chocolate milk",
+      "Ice, to fill the glass",
+      "1 freshly pulled double-shot espresso (espresso machine)",
+      "1 tbsp dark chocolate peanut butter",
+      "8–10 g honey, for the espresso mixture",
+      "For the honey cloud: 30 ml whipping cream",
+      "For the honey cloud: 10 ml milk",
+      "For the honey cloud: 10 ml honey",
+      "Chocolate or cocoa powder, for dusting"
     ],
     "steps": [
-      "Dissolve honey into freshly brewed warm coffee.",
-      "Add ice and chilled milk to a glass.",
-      "Pour the honey coffee over the milk.",
-      "Taste before adding extra honey."
-    ]
-  },
-  {
-    "id": "cranberry-coffee",
-    "name": "Cranberry Coffee Fizz",
-    "categories": [
-      "Iced",
-      "Signature",
-      "Fruity"
+      "Prepare chocolate milk by mixing 2–3 g Hershey’s chocolate powder smoothly into 120 ml chilled milk (make a paste with a small splash of the milk first if needed).",
+      "Pull one double-shot espresso. While warm, thoroughly stir in 1 tbsp dark chocolate peanut butter and 8–10 g honey until as smooth as possible.",
+      "Pour the chocolate milk into a tall glass, then add ice.",
+      "Slowly pour the peanut-butter-and-honey espresso over the ice.",
+      "Whisk or froth 30 ml whipping cream, 10 ml milk and 10 ml honey until thick yet pourable.",
+      "Spoon the honey cloud on top and finish with a light chocolate or cocoa dusting."
     ],
-    "badge": "Fruity twist",
-    "serve": "300 ml",
-    "image": "images/cranberry.svg",
-    "description": "Tart cranberry and bold coffee — bright, refreshing and a little unexpected.",
-    "tags": [
-      "cranberry",
-      "juice",
-      "fizzy",
-      "fruit"
-    ],
-    "brewMethod": "Moka pot",
-    "prepTime": "6 min",
-    "strength": "Bold",
-    "ingredients": [
-      "40–50 ml strong moka coffee, cooled",
-      "110 ml cranberry juice",
-      "60 ml plain chilled soda water, optional",
-      "Ice to fill the glass",
-      "Optional lime wedge"
-    ],
-    "steps": [
-      "Fill a tall glass with plenty of ice.",
-      "Add cranberry juice and optional soda water.",
-      "Slowly pour cooled coffee over the top.",
-      "Finish with a small squeeze of lime if desired."
-    ]
-  },
-  {
-    "id": "iced-americano",
-    "name": "Iced Americano",
-    "categories": [
-      "Iced"
-    ],
-    "badge": "Pure coffee",
-    "serve": "300 ml",
-    "image": "images/americano.svg",
-    "description": "Crisp, clean and unapologetically coffee-forward.",
-    "tags": [
-      "black",
-      "americano",
-      "no milk",
-      "strong"
-    ],
-    "brewMethod": "Moka pot",
-    "prepTime": "6 min",
-    "strength": "Bold",
-    "ingredients": [
-      "80–90 ml strong moka coffee",
-      "90–120 ml chilled water",
-      "Ice to fill the glass"
-    ],
-    "steps": [
-      "Brew your moka coffee and let it settle briefly.",
-      "Add chilled water and ice to a serving glass.",
-      "Pour the coffee over the top.",
-      "Adjust with water for your preferred intensity."
-    ]
-  },
-  {
-    "id": "lychee-fizz",
-    "name": "Lychee Coffee Fizz",
-    "categories": [
-      "Iced",
-      "Signature",
-      "Fruity"
-    ],
-    "badge": "Playful",
-    "serve": "300 ml",
-    "image": "images/lychee.svg",
-    "description": "Delicate lychee and lively bubbles with an aromatic coffee finish.",
-    "tags": [
-      "lychee",
-      "soda",
-      "fruity",
-      "summer"
-    ],
-    "brewMethod": "Moka pot",
-    "prepTime": "6 min",
-    "strength": "Medium",
-    "ingredients": [
-      "40 ml strong moka coffee, cooled",
-      "90–110 ml lychee juice",
-      "70 ml chilled soda water",
-      "Ice to fill the glass"
-    ],
-    "steps": [
-      "Fill a tall glass with ice.",
-      "Add chilled lychee juice and soda water.",
-      "Float the coffee gently on top.",
-      "Taste before adding sweetener — bottled lychee juice is often sweet."
+    "notes": "Contains peanuts and dairy. Stir peanut butter thoroughly into hot espresso before pouring; cloud toppings are best made fresh.",
+    "allergens": [
+      "Peanuts",
+      "Dairy"
     ]
   }
 ]
