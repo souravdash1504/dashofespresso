@@ -1,0 +1,266 @@
+[
+  {
+    "id": "vietnamese-iced",
+    "name": "Vietnamese Iced Coffee",
+    "categories": [
+      "Iced"
+    ],
+    "badge": "Crowd favourite",
+    "serve": "300 ml",
+    "image": "images/vietnamese.svg",
+    "description": "Bold moka brew meets silky condensed milk. Sweet, strong, unforgettable.",
+    "tags": [
+      "condensed milk",
+      "moka",
+      "creamy"
+    ],
+    "brewMethod": "Moka pot",
+    "prepTime": "8 min",
+    "strength": "Strong",
+    "ingredients": [
+      "18 g freshly ground dark-roast coffee",
+      "About 100 ml water for moka pot (adjust to pot specifications)",
+      "20–25 g sweetened condensed milk",
+      "30–45 ml cold milk, optional",
+      "Ice, to fill a 300 ml glass"
+    ],
+    "steps": [
+      "Brew a strong concentrate with your moka pot, following its safe fill guidelines.",
+      "Stir the hot coffee with condensed milk until completely smooth.",
+      "Add cold milk if you prefer a softer cup.",
+      "Pour over a full glass of ice and stir once."
+    ]
+  },
+  {
+    "id": "spanish-latte",
+    "name": "Spanish Latte",
+    "categories": [
+      "Iced"
+    ],
+    "badge": "Smooth & sweet",
+    "serve": "300 ml",
+    "image": "images/spanish.svg",
+    "description": "A velvety iced latte with a delicate condensed-milk finish.",
+    "tags": [
+      "latte",
+      "milk",
+      "condensed",
+      "sweet"
+    ],
+    "brewMethod": "Moka pot",
+    "prepTime": "7 min",
+    "strength": "Medium",
+    "ingredients": [
+      "60 ml strong moka coffee",
+      "160 ml chilled milk",
+      "15 g sweetened condensed milk",
+      "Ice, to taste"
+    ],
+    "steps": [
+      "Stir condensed milk into the warm coffee until dissolved.",
+      "Fill a glass with ice and chilled milk.",
+      "Pour the coffee slowly over the milk for a layered finish.",
+      "Adjust condensed milk to your preferred sweetness."
+    ]
+  },
+  {
+    "id": "jamun-tonic",
+    "name": "Jamun Coffee Tonic",
+    "categories": [
+      "Iced",
+      "Signature",
+      "Fruity"
+    ],
+    "badge": "Signature",
+    "serve": "300 ml",
+    "image": "images/jamun.svg",
+    "description": "Jamun fruit, bright citrus and sparkling tonic meet an espresso-style brew.",
+    "tags": [
+      "jamun",
+      "tonic",
+      "sparkling",
+      "fruit"
+    ],
+    "brewMethod": "Moka pot",
+    "prepTime": "10 min",
+    "strength": "Medium",
+    "ingredients": [
+      "35–45 ml strong moka coffee, cooled slightly",
+      "40–50 g ripe jamun, deseeded",
+      "110–130 ml chilled tonic water",
+      "5 ml lime juice",
+      "Ice and a pinch of salt"
+    ],
+    "steps": [
+      "Muddle deseeded jamun with lime and a tiny pinch of salt.",
+      "Add plenty of ice and slowly pour in chilled tonic.",
+      "Gently float the coffee on top.",
+      "Taste before adding any sweetener; tonic may already be sweet."
+    ]
+  },
+  {
+    "id": "cappuccino",
+    "name": "Classic Cappuccino",
+    "categories": [
+      "Hot"
+    ],
+    "badge": "The classic",
+    "serve": "250 ml",
+    "image": "images/cappuccino.svg",
+    "description": "Deep coffee, creamy steamed milk and a cloud of foam.",
+    "tags": [
+      "foam",
+      "hot",
+      "milk",
+      "classic"
+    ],
+    "brewMethod": "Moka pot",
+    "prepTime": "9 min",
+    "strength": "Medium",
+    "ingredients": [
+      "60 ml strong moka coffee",
+      "160–180 ml hot milk (adjust for cup size)",
+      "Fine milk foam to finish",
+      "Optional cocoa powder"
+    ],
+    "steps": [
+      "Brew the coffee into a preheated cup.",
+      "Heat milk without letting it boil and froth until velvety.",
+      "Gently pour the milk and foam into the coffee.",
+      "Finish with latte art or a little cocoa if you like."
+    ]
+  },
+  {
+    "id": "honey-latte",
+    "name": "Iced Honey Latte",
+    "categories": [
+      "Iced",
+      "Signature"
+    ],
+    "badge": "Lightly sweet",
+    "serve": "300 ml",
+    "image": "images/honey.svg",
+    "description": "Floral honey, smooth milk and punchy coffee. Sweetness, kept in balance.",
+    "tags": [
+      "honey",
+      "latte",
+      "milk",
+      "sweet"
+    ],
+    "brewMethod": "Moka pot",
+    "prepTime": "7 min",
+    "strength": "Medium",
+    "ingredients": [
+      "60 ml strong moka coffee",
+      "170 ml chilled milk",
+      "8–10 g honey",
+      "Ice, to taste"
+    ],
+    "steps": [
+      "Dissolve honey into freshly brewed warm coffee.",
+      "Add ice and chilled milk to a glass.",
+      "Pour the honey coffee over the milk.",
+      "Taste before adding extra honey."
+    ]
+  },
+  {
+    "id": "cranberry-coffee",
+    "name": "Cranberry Coffee Fizz",
+    "categories": [
+      "Iced",
+      "Signature",
+      "Fruity"
+    ],
+    "badge": "Fruity twist",
+    "serve": "300 ml",
+    "image": "images/cranberry.svg",
+    "description": "Tart cranberry and bold coffee — bright, refreshing and a little unexpected.",
+    "tags": [
+      "cranberry",
+      "juice",
+      "fizzy",
+      "fruit"
+    ],
+    "brewMethod": "Moka pot",
+    "prepTime": "6 min",
+    "strength": "Bold",
+    "ingredients": [
+      "40–50 ml strong moka coffee, cooled",
+      "110 ml cranberry juice",
+      "60 ml plain chilled soda water, optional",
+      "Ice to fill the glass",
+      "Optional lime wedge"
+    ],
+    "steps": [
+      "Fill a tall glass with plenty of ice.",
+      "Add cranberry juice and optional soda water.",
+      "Slowly pour cooled coffee over the top.",
+      "Finish with a small squeeze of lime if desired."
+    ]
+  },
+  {
+    "id": "iced-americano",
+    "name": "Iced Americano",
+    "categories": [
+      "Iced"
+    ],
+    "badge": "Pure coffee",
+    "serve": "300 ml",
+    "image": "images/americano.svg",
+    "description": "Crisp, clean and unapologetically coffee-forward.",
+    "tags": [
+      "black",
+      "americano",
+      "no milk",
+      "strong"
+    ],
+    "brewMethod": "Moka pot",
+    "prepTime": "6 min",
+    "strength": "Bold",
+    "ingredients": [
+      "80–90 ml strong moka coffee",
+      "90–120 ml chilled water",
+      "Ice to fill the glass"
+    ],
+    "steps": [
+      "Brew your moka coffee and let it settle briefly.",
+      "Add chilled water and ice to a serving glass.",
+      "Pour the coffee over the top.",
+      "Adjust with water for your preferred intensity."
+    ]
+  },
+  {
+    "id": "lychee-fizz",
+    "name": "Lychee Coffee Fizz",
+    "categories": [
+      "Iced",
+      "Signature",
+      "Fruity"
+    ],
+    "badge": "Playful",
+    "serve": "300 ml",
+    "image": "images/lychee.svg",
+    "description": "Delicate lychee and lively bubbles with an aromatic coffee finish.",
+    "tags": [
+      "lychee",
+      "soda",
+      "fruity",
+      "summer"
+    ],
+    "brewMethod": "Moka pot",
+    "prepTime": "6 min",
+    "strength": "Medium",
+    "ingredients": [
+      "40 ml strong moka coffee, cooled",
+      "90–110 ml lychee juice",
+      "70 ml chilled soda water",
+      "Ice to fill the glass"
+    ],
+    "steps": [
+      "Fill a tall glass with ice.",
+      "Add chilled lychee juice and soda water.",
+      "Float the coffee gently on top.",
+      "Taste before adding sweetener — bottled lychee juice is often sweet."
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="800" viewBox="0 0 700 800" role="img" aria-label="Stylized coffee drink illustration">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#e6bec0"/><stop offset="1" stop-color="#92636a"/></linearGradient><radialGradient id="glow"><stop stop-color="#fff9ea" stop-opacity=".67"/><stop offset="1" stop-color="#fff9ea" stop-opacity="0"/></radialGradient><filter id="shade" x="-35%" y="-35%" width="170%" height="170%"><feGaussianBlur stdDeviation="30"/></filter></defs>
+<rect width="700" height="800" fill="url(#bg)"/><circle cx="350" cy="270" r="337" fill="url(#glow)"/>
+<circle cx="575" cy="114" r="235" fill="#fff7e5" opacity=".085"/><circle cx="105" cy="775" r="258" fill="#1f110f" opacity=".095"/>
+<path d="M-30 704 C189 625 461 670 730 608 L730 810 L-30 810Z" fill="#4e242b" opacity=".13"/>
+<ellipse cx="360" cy="662" rx="206" ry="33" fill="#160c08" opacity=".24" filter="url(#shade)"/>
+<ellipse cx="352" cy="663" rx="159" ry="21" fill="#160e0a" opacity=".24"/>
+<path d="M230 290 Q220 291 227 357 L247 611 Q250 658 288 666 L418 666 Q456 658 459 613 L481 357 Q485 292 473 290Z" fill="#fff6e8" opacity=".32" stroke="#fff9ec" stroke-width="11"/>
+<clipPath id="fillclip"><path d="M236 301 L469 301 L451 610 Q448 648 416 656 L290 656 Q257 644 257 610Z"/></clipPath>
+<g clip-path="url(#fillclip)"><rect x="226" y="358" width="260" height="320" fill="#ac4256"/>
+<path d="M227 358 Q310 342 351 365 T483 347 L480 273 L222 277Z" fill="#29151a" opacity=".97"/>
+<path d="M226 409 Q330 431 481 391" stroke="#ffdbcb" stroke-width="9" fill="none" opacity=".45"/><g opacity=".42" stroke="#fffbf1" stroke-width="7"><rect x="275" y="355" width="49" height="45" rx="7" fill="#fff7ee" transform="rotate(-16 300 377)"/><rect x="397" y="391" width="49" height="45" rx="7" fill="#fff7ee" transform="rotate(17 422 413)"/><rect x="333" y="462" width="49" height="45" rx="7" fill="#fff7ee" transform="rotate(-22 358 484)"/><rect x="405" y="531" width="49" height="45" rx="7" fill="#fff7ee" transform="rotate(24 430 553)"/><rect x="281" y="550" width="49" height="45" rx="7" fill="#fff7ee" transform="rotate(14 306 572)"/></g></g><path d="M256 337 Q248 403 270 551" fill="none" stroke="#fffdf7" stroke-width="10" stroke-linecap="round" opacity=".42"/><ellipse cx="352" cy="295" rx="124" ry="21" fill="#eedbc8" opacity=".55" stroke="#fff4e8" stroke-width="7"/><path d="M430 325 L507 187" stroke="#fff8e9" stroke-width="12" stroke-linecap="round" opacity=".8"/>
+<text x="46" y="64" font-size="13" font-family="Arial,sans-serif" letter-spacing="6" fill="#4e242b" opacity=".48">HOME BREW BAR</text>
+<g transform="translate(614 50)"><circle r="25" fill="none" stroke="#4e242b" opacity=".35"/><path d="M-12 0 H12 M0 -12 V12 M-8 -8 L8 8 M-8 8 L8 -8" stroke="#4e242b" stroke-width="1.5" opacity=".7"/></g>
+</svg>
