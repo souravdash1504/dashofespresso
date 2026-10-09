@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#251910" />
+  <meta name="description" content="A little coffee bar at home. Explore signature brews, discover recipes and request your favourite cup." />
+  <title>Dash of Espresso — Crafted, one cup at a time</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="config.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#menu">Skip to coffee menu</a>
+  <header class="site-header" id="top">
+    <a href="#top" class="brand" aria-label="Dash of Espresso, back to top">
+      <span class="brand-symbol" aria-hidden="true">✳</span>
+      <span class="brand-name">DASH OF <em>ESPRESSO</em><small>A LITTLE DASH · A LOT OF COFFEE</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#menu">The menu</a>
+      <a href="#story" class="nav-story">Our story</a>
+      <a class="nav-cta" href="#menu">Find your cup <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="sparkle">✦</span> A LITTLE CORNER OF COFFEE JOY</div>
+        <h1 id="hero-title">Good coffee.<br><em>Better company.</em></h1>
+        <p>Welcome to Dash of Espresso, Sourav’s home coffee bar. A little dash, a lot of coffee. Discover a cup you’ll love.</p>
+        <div class="hero-actions">
+          <a class="button button-cream" href="#menu">Explore our menu <span aria-hidden="true">↗</span></a>
+          <a class="hero-link" href="#story">What we're about <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero-note"><span class="pulse-dot"></span> HANDCRAFTED AT HOME <span class="note-separator">/</span> NO PRICE TAG, JUST GOOD VIBES</div>
+      </div>
+      <div class="hero-art" role="img" aria-label="Illustration of a layered iced coffee with a golden espresso pour">
+        <div class="hero-art-frame">
+          <img src="images/hero.svg" width="640" height="750" alt="A beautifully layered iced latte in a glass" fetchpriority="high" />
+          <div class="hero-corner hero-corner-top">BREWED<br>WITH LOVE <span>✳</span></div>
+          <div class="hero-corner hero-corner-bottom">01 / THE GOOD STUFF</div>
+        </div>
+      </div>
+      <div class="hero-side-label" aria-hidden="true">SLOW MORNINGS · FRESH BREWS · GOOD PEOPLE</div>
+    </section>
+
+    <section class="intro-strip" aria-label="Coffee bar philosophy">
+      <div><span aria-hidden="true">✳</span> MADE WITH CARE</div><div><span aria-hidden="true">✳</span> BREWED FRESH</div><div><span aria-hidden="true">✳</span> ALWAYS PERSONAL</div>
+    </section>
+
+    <section id="menu" class="menu-section" aria-labelledby="menu-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">01 — PICK YOUR PLEASURE</p><h2 id="menu-title">The coffee <em>edit.</em></h2></div>
+        <p>Classics, coolers & curious little creations. Find your next favourite.</p>
+      </div>
+      <div class="menu-tools">
+        <div class="filter-list" id="categoryFilters" role="group" aria-label="Filter drinks by category"></div>
+        <label class="search-field"><span class="visually-hidden">Search drinks</span><svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m16 16 5 5" fill="none" stroke="currentColor" stroke-width="1.7"/></svg><input id="searchInput" type="search" placeholder="Search your craving..." autocomplete="off" /></label>
+      </div>
+      <div id="menuGrid" class="menu-grid" aria-live="polite" aria-busy="true">
+        <p class="loading-message">Warming up the coffee menu…</p>
+      </div>
+      <p class="results-note" id="resultsNote" role="status"></p>
+    </section>
+
+    <section class="story" id="story" aria-labelledby="story-title">
+      <div class="story-illustration"><span aria-hidden="true">☕</span><span class="story-ring">COFFEE IS OUR LOVE LANGUAGE · </span></div>
+      <div class="story-copy"><p class="section-kicker">02 — A NOTE FROM THE BARISTA</p><h2 id="story-title">A café feeling,<br><em>right at home.</em></h2><p>This isn't a commercial café. It's a passion project — a tiny bar dedicated to experimenting with great beans, curious flavours and the joy of making a cup for someone else.</p><a href="#menu" class="story-link">Find your next favourite <span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div><span class="footer-star">✳</span><span class="footer-title">DASH OF ESPRESSO</span><span class="footer-sub">BREWED WITH LOVE, SERVED WITH A SMILE.</span></div><a href="#top">Back to top ↑</a><p>Personal home coffee bar · Demo recipes and illustrations — make them yours before sharing.</p></footer>
+
+  <dialog id="recipeDialog" class="panel-dialog" aria-labelledby="recipeTitle">
+    <div class="dialog-inner"><button type="button" class="dialog-close" data-close="recipeDialog" aria-label="Close recipe">×</button><div id="recipeContent"></div></div>
+  </dialog>
+
+  <dialog id="orderDialog" class="panel-dialog" aria-labelledby="orderTitle">
+    <div class="dialog-inner"><button type="button" class="dialog-close" data-close="orderDialog" aria-label="Close order">×</button>
+      <div class="modal-heading"><p class="section-kicker">MAKE IT YOURS</p><h2 id="orderTitle">Your perfect <em>cup.</em></h2><p id="orderDrinkName" class="order-drink-name"></p></div>
+      <form id="orderForm">
+        <label class="field">Your name <input id="guestName" name="guestName" maxlength="50" autocomplete="name" placeholder="So your barista knows it's you" required /></label>
+        <div class="form-row"><label class="field">Sweetness <select id="sweetness" name="sweetness"><option>Less sweet</option><option>Regular</option><option>No added sugar</option></select></label><label class="field">Serving <select id="serving" name="serving"><option value="250 ml">250 ml</option><option value="300 ml" selected>300 ml</option><option value="325 ml">325 ml</option></select></label></div>
+        <label class="field">Milk preference <select id="milk" name="milk"><option>As in recipe</option><option>Regular dairy milk</option><option>Oat milk (if available)</option><option>No milk (if suitable)</option></select></label>
+        <label class="field">Anything else? <textarea id="orderNotes" name="notes" rows="2" maxlength="250" placeholder="Extra strong, no ice, surprise me…"></textarea></label>
+        <div class="order-actions"><button type="button" id="whatsappOrder" class="button button-dark" hidden>Send via WhatsApp ↗</button><button type="button" id="emailOrder" class="button button-dark" hidden>Send via email ↗</button><button type="button" id="shareOrder" class="button button-secondary" hidden>Share order ↗</button><button type="button" id="copyOrder" class="button button-outline">Copy order</button></div>
+        <p class="form-hint" id="orderHint">Your order will open in a messaging app for you to send — it is not submitted automatically.</p><p class="order-feedback" id="orderFeedback" role="status"></p>
+      </form>
+    </div>
+  </dialog>
+  <noscript><p class="noscript">Please enable JavaScript to explore drinks and recipes.</p></noscript>
+</body>
+</html>
