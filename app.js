@@ -7,7 +7,7 @@
   const searchInput = $("#searchInput");
   const config = window.COFFEE_BAR_CONFIG || {};
   const state = { drinks: [], category: "All", query: "", activeDrink: null };
-  const categories = ["All", "Iced", "Dessert", "Signature", "Fruity"];
+  const categories = ["All", "Iced", "Hot", "Dessert", "Signature", "Fruity"];
   const imageFallback = "images/coffee-default.svg";
 
   const el = (tag, className, text) => {
@@ -113,11 +113,15 @@
     $("#serving").textContent = drink.serve || "As described";
     const preference = $("#preference");
     preference.replaceChildren();
-    const options = drink.id === "classic-affogato"
+    // New drinks can define their own choices in recipes.json, without editing app.js again.
+    const defaults = drink.id === "classic-affogato"
       ? ["As in recipe", "Light cocoa dusting", "No cocoa dusting"]
       : drink.id === "salted-caramel-affogato"
       ? ["As in recipe", "Less caramel sauce", "Extra caramel sauce (if available)"]
       : ["As in recipe", "Light ice", "Extra ice", "Less sweet (where possible)"];
+    const options = Array.isArray(drink.orderPreferences) && drink.orderPreferences.length
+      ? drink.orderPreferences : defaults;
+    $("#preferenceLabel").textContent = drink.orderLabel || "Preference";
     options.forEach(label => { const option = el("option", "", label); option.value = label; preference.append(option); });
     $("#orderFeedback").textContent = "";
     showDialog($("#orderDialog"));
@@ -128,7 +132,7 @@
     const guest = $("#guestName").value.trim();
     if (!guest) { $("#guestName").focus(); return null; }
     const notes = $("#orderNotes").value.trim();
-    return `☕ COFFEE REQUEST — ${config.cafeName || "Dash of Espresso"}\nName: ${guest}\nDrink: ${state.activeDrink.name}\nServing: ${$("#serving").textContent}\nPreference: ${$("#preference").value}\n${notes ? `Note: ${notes}\n` : ""}Please let me know if you can make this!`;
+    return `☕ COFFEE REQUEST — ${config.cafeName || "Dash of Espresso"}\nName: ${guest}\nDrink: ${state.activeDrink.name}\nServing: ${$("#serving").textContent}\n${state.activeDrink.orderLabel || "Preference"}: ${$("#preference").value}\n${notes ? `Note: ${notes}\n` : ""}Please let me know if you can make this!`;
   }
   function feedback(message) { $("#orderFeedback").textContent = message; }
   function initOrdering() {

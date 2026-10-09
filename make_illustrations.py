@@ -67,6 +67,28 @@ def affogato(caramel=False):
         for x,y,r in [(280,367,3),(334,341,2),(386,349,3),(428,405,2),(308,425,3),(366,395,2)]:scoop+=f'<circle cx="{x}" cy="{y}" r="{r}" fill="#5b321f" opacity=".75"/>'
     return scoop
 
+
+def hot_cappuccino():
+    # Warm ceramic cup on saucer, silky espresso and milk foam with a simple rosetta.
+    return '''
+<ellipse cx="350" cy="662" rx="183" ry="25" fill="#352016" opacity=".24"/>
+<ellipse cx="351" cy="638" rx="203" ry="34" fill="#f8e7d0" stroke="#fcf4e6" stroke-width="11"/>
+<ellipse cx="352" cy="642" rx="153" ry="13" fill="#d6ae87" opacity=".65"/>
+<path d="M234 360 Q221 361 231 417 L258 554 Q269 607 341 616 H385 Q454 607 461 554 L486 417 Q497 359 485 357Z" fill="#f9ecdb" stroke="#fff7e8" stroke-width="13"/>
+<path d="M481 395 C578 363 573 528 467 508" fill="none" stroke="#faf0df" stroke-width="35"/>
+<path d="M481 395 C541 392 549 479 479 483" fill="none" stroke="#b78a68" stroke-width="10"/>
+<ellipse cx="357" cy="363" rx="136" ry="47" fill="#e6bc90" stroke="#fff7e8" stroke-width="12"/>
+<ellipse cx="357" cy="363" rx="118" ry="37" fill="#9c6140"/>
+<path d="M353 380 C310 351 327 328 355 344 C383 327 411 353 357 386
+ M356 386 C331 363 345 351 359 363 C376 351 392 371 356 390
+ M355 390 Q357 404 359 418" fill="none" stroke="#fff3dd" stroke-width="12" stroke-linecap="round"/>
+<path d="M270 460 Q280 546 313 566" fill="none" stroke="#ffffff" stroke-width="13" stroke-linecap="round" opacity=".48"/>
+<path d="M251 437 Q277 457 291 454" stroke="#fffdf4" stroke-width="7" opacity=".45" fill="none"/>
+<g fill="none" stroke="#f5ddbc" stroke-width="7" stroke-linecap="round" opacity=".66">
+<path d="M281 268 Q258 244 278 216"/><path d="M351 269 Q335 241 348 209"/><path d="M426 269 Q413 246 434 218"/>
+</g>
+'''
+
 # Dedicated visuals: the actual ingredients appear in the artworks, not generic stock cups.
 artworks={
  'fridge-cigarette':illustration('fridge-cigarette','#d7c5ac','#5c463f','#34231f',glass('''<rect x="230" y="300" width="250" height="359" fill="#261916"/>
@@ -75,6 +97,12 @@ artworks={
 <g fill="#ecdcc8" opacity=".45"><circle cx="282" cy="432" r="4"/><circle cx="450" cy="485" r="3"/><circle cx="340" cy="543" r="5"/><circle cx="397" cy="616" r="3"/></g>''',clouds())),
  'classic-affogato':illustration('classic-affogato','#e9d5b2','#a78162','#5a3925',affogato()),
  'salted-caramel-affogato':illustration('salted-caramel-affogato','#eddbbd','#b88c66','#80542e',affogato(caramel=True)),
+ 'sunset-americano':illustration('sunset-americano','#e4b390','#805348','#6f3e2d',glass('''<rect x="230" y="460" width="250" height="207" fill="#4e2d22"/>
+<rect x="230" y="387" width="250" height="78" fill="#bd9670" opacity=".88"/>
+<path d="M231 385 Q345 374 473 387 L480 300 H228Z" fill="#f2a442"/>
+<path d="M234 471 Q334 451 472 472" stroke="#f6d5aa" stroke-width="8" fill="none" opacity=".5"/>
+<g fill="#fff4e1" opacity=".52"><circle cx="299" cy="408" r="4"/><circle cx="376" cy="431" r="3"/><circle cx="431" cy="404" r="5"/></g>''',extras='''<g transform="translate(248 314)"><circle r="66" fill="#ed8e31" stroke="#fff0c8" stroke-width="14"/><circle r="51" fill="#f3b35b"/><circle r="42" fill="none" stroke="#fff3ce" stroke-width="3"/>'''+''.join(f'<path d="M0 0 L{x} {y}" stroke="#fff4ce" stroke-width="4"/>' for x,y in [(0,-42),(35,-23),(35,23),(0,42),(-35,23),(-35,-23)])+'''</g>''')),
+ 'hot-cappuccino':illustration('hot-cappuccino','#dfcbb4','#8e6951','#5e3d2b',hot_cappuccino()),
  'sunrise-americano':illustration('sunrise-americano','#f9dca6','#c48653','#9a5325',glass('''<rect x="230" y="418" width="250" height="247" fill="#f4a52e"/>
 <rect x="230" y="363" width="250" height="71" fill="#f1cd77" opacity=".66"/>
 <path d="M227 359 Q315 378 362 361 T480 354 L476 285 H227Z" fill="#52301d"/>
@@ -93,4 +121,4 @@ jamun.write_text(original.replace('HOME BREW BAR','DASH OF ESPRESSO').replace('l
 # Retain existing illustrated hero + favicon, update hero brand mark.
 hero=out/'hero.svg'
 hero.write_text(hero.read_text(encoding='utf-8').replace('HOME BREW BAR','DASH OF ESPRESSO').replace('letter-spacing="6"','letter-spacing="4.1"'),encoding='utf-8')
-print('Updated 5 illustrations, and refreshed Jamun and hero branding')
+print('Updated 7 illustrations, and refreshed Jamun and hero branding')

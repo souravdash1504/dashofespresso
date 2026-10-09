@@ -1,6 +1,6 @@
-# Dash of Espresso — menu update (v2)
+# Dash of Espresso — menu update (v3)
 
-This is the updated, free Cloudflare Pages website for Sourav’s home café. It includes **six drinks** with custom illustrated SVG assets and recipe details. All espresso drinks use **one double shot from an espresso machine**.
+This is the updated, free Cloudflare Pages website for Sourav’s home café. It includes **eight drinks** with custom illustrated SVG assets and recipe details. All espresso drinks use **one double shot from an espresso machine**.
 
 ## Menu now
 - Fridge Cigarette — Diet Coke, espresso, vanilla cloud
@@ -8,6 +8,8 @@ This is the updated, free Cloudflare Pages website for Sourav’s home café. It
 - Salted Caramel Affogato — vanilla ice cream, espresso, 20 g caramel sauce, pinch of salt
 - Jamun Coffee Tonic — retained signature with double espresso instead of moka-pot brew
 - Sunrise Americano — orange juice, soda water, espresso, orange garnish
+- Sunset Americano — same ingredients as Sunrise, but espresso first, then soda, then orange
+- Hot Cappuccino — double espresso, 180–200 g steamed milk, six sweetener choices
 - Dark Chocolate Peanut Butter Iced Latte — chocolate milk, peanut butter/honey espresso, honey cloud
 
 No other sample drinks are present. Change `data/recipes.json` to edit measurements or add drinks. `app.js` now has an **Iced / Dessert / Signature / Fruity** filter and a simpler order form (recipe serving + a preference). Artwork is under `images/`.
@@ -27,3 +29,10 @@ To run locally, open a terminal in the extracted project folder and execute `py 
 - Peanut butter latte contains **peanuts and dairy**. Affogatos and vanilla-cloud Fridge Cigarette contain dairy.
 - The order system has no backend. Configure `config.js` for WhatsApp/email; guests must press Send to deliver a request.
 - Keep the website URL unchanged so your NFC tag continues to work.
+
+## v3 details
+New drinks can define `orderLabel` and `orderPreferences` in `data/recipes.json`. For example Hot Cappuccino has `orderLabel: "Sweetener"` and the choices No sweetener, Brown sugar, Honey, Condensed milk, White sugar, and Stevia. If these optional keys are missing, the existing drink ordering behaviour is preserved.
+
+Run `python make_illustrations.py` to recreate the editable SVG menu artwork.
+
+To update your existing repository, replace ONLY the files contained in the v3 GitHub update ZIP with their matching paths in the repository working folder, then commit and push using GitHub Desktop. Cloudflare Pages will redeploy without changing the NFC link.

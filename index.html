@@ -86,7 +86,7 @@
       <div class="modal-heading"><p class="section-kicker">MAKE IT YOURS</p><h2 id="orderTitle">Your perfect <em>cup.</em></h2><p id="orderDrinkName" class="order-drink-name"></p></div>
       <form id="orderForm">
         <label class="field">Your name <input id="guestName" name="guestName" maxlength="50" autocomplete="name" placeholder="So your barista knows it's you" required /></label>
-        <div class="form-row"><label class="field">Preference <select id="preference" name="preference"><option>As in recipe</option></select></label><label class="field">Recipe serving <span class="readonly-serving" id="serving"></span></label></div>
+        <div class="form-row"><label class="field"><span id="preferenceLabel">Preference</span> <select id="preference" name="preference"><option>As in recipe</option></select></label><label class="field">Recipe serving <span class="readonly-serving" id="serving"></span></label></div>
         <label class="field">Anything else? <textarea id="orderNotes" name="notes" rows="2" maxlength="250" placeholder="Extra strong, no ice, surprise me…"></textarea></label>
         <div class="order-actions"><button type="button" id="whatsappOrder" class="button button-dark" hidden>Send via WhatsApp ↗</button><button type="button" id="emailOrder" class="button button-dark" hidden>Send via email ↗</button><button type="button" id="shareOrder" class="button button-secondary" hidden>Share order ↗</button><button type="button" id="copyOrder" class="button button-outline">Copy order</button></div>
         <p class="form-hint" id="orderHint">Your order will open in a messaging app for you to send — it is not submitted automatically.</p><p class="order-feedback" id="orderFeedback" role="status"></p>

@@ -202,6 +202,49 @@
     "allergens": []
   },
   {
+    "id": "sunset-americano",
+    "name": "Sunset Americano",
+    "categories": [
+      "Iced",
+      "Signature",
+      "Fruity"
+    ],
+    "badge": "Citrus sunset",
+    "serve": "Tall iced glass",
+    "image": "images/sunset-americano.svg",
+    "description": "A sparkling citrus espresso with the layers reversed: espresso first, soda next, orange last.",
+    "tags": [
+      "sunset",
+      "orange",
+      "juice",
+      "soda",
+      "fizzy",
+      "americano",
+      "citrus",
+      "espresso",
+      "iced"
+    ],
+    "brewMethod": "Espresso machine · double shot",
+    "prepTime": "5 min",
+    "strength": "Medium",
+    "ingredients": [
+      "80 ml chilled orange juice",
+      "60 ml chilled soda water",
+      "1 freshly pulled double-shot espresso (espresso machine)",
+      "Ice, to fill the glass",
+      "1 fresh orange slice, for garnish"
+    ],
+    "steps": [
+      "Fill a serving glass with ice.",
+      "Pull one fresh double-shot espresso and pour it into the iced glass first.",
+      "Slowly add 60 ml chilled soda water over the espresso to limit foaming.",
+      "Gently pour in 80 ml chilled orange juice as the final liquid layer.",
+      "Garnish with a fresh orange slice and serve immediately."
+    ],
+    "notes": "The same ingredients as Sunrise Americano, but with the opposite pouring order. The liquids may naturally mingle rather than remain in perfectly separate layers.",
+    "allergens": []
+  },
+  {
     "id": "dark-chocolate-peanut-butter-latte",
     "name": "Dark Chocolate Peanut Butter Iced Latte",
     "categories": [
@@ -248,6 +291,57 @@
     "allergens": [
       "Peanuts",
       "Dairy"
+    ]
+  },
+  {
+    "id": "hot-cappuccino",
+    "name": "Hot Cappuccino",
+    "categories": [
+      "Hot"
+    ],
+    "badge": "Classic · Your way",
+    "serve": "Double espresso + 180–200 g steamed milk",
+    "image": "images/hot-cappuccino.svg",
+    "description": "A comforting double espresso topped with velvety steamed milk and soft foam, sweetened exactly how you like.",
+    "tags": [
+      "cappuccino",
+      "hot",
+      "steamed milk",
+      "foamy",
+      "brown sugar",
+      "honey",
+      "condensed milk",
+      "white sugar",
+      "stevia",
+      "espresso"
+    ],
+    "brewMethod": "Espresso machine · double shot",
+    "prepTime": "5 min",
+    "strength": "Classic",
+    "ingredients": [
+      "1 freshly pulled double-shot espresso (espresso machine)",
+      "180–200 g steamed, textured milk",
+      "Optional sweetener: brown sugar, honey, condensed milk, white sugar or stevia (amount to taste)"
+    ],
+    "steps": [
+      "Pull one freshly brewed double-shot espresso into a pre-warmed cappuccino cup.",
+      "If requested, add the guest’s chosen sweetener to the espresso and stir until incorporated. Start with a small amount and adjust to taste.",
+      "Steam and texture 180–200 g milk until silky, with fine microfoam suitable for a cappuccino.",
+      "Pour the steamed milk gently into the espresso, finishing with a soft foam layer and latte art if desired.",
+      "Serve immediately while hot."
+    ],
+    "notes": "Sweetener is optional. Guests select their preferred type when ordering; quantities are adjustable to taste. The requested 180–200 g milk gives a larger, milk-forward cappuccino.",
+    "allergens": [
+      "Dairy"
+    ],
+    "orderLabel": "Sweetener",
+    "orderPreferences": [
+      "No sweetener",
+      "Brown sugar",
+      "Honey",
+      "Condensed milk",
+      "White sugar",
+      "Stevia"
     ]
   }
 ]
