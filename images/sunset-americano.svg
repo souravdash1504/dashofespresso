@@ -1,29 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="700" height="800" viewBox="0 0 700 800" role="img" aria-label="Illustrated sunset americano with cranberry, orange and espresso layers">
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="800" viewBox="0 0 700 800" role="img" aria-label="Illustrated sunset americano coffee">
 <defs>
-  <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#dfc7bf"/><stop offset="1" stop-color="#f5ecdf"/></linearGradient>
-  <radialGradient id="sun" cx="72%" cy="22%" r="45%"><stop stop-color="#fff4d4" stop-opacity=".95"/><stop offset="1" stop-color="#fff4d4" stop-opacity="0"/></radialGradient>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f0bf9a"/><stop offset="1" stop-color="#8f4f4f"/></linearGradient>
+  <radialGradient id="sun"><stop stop-color="#fff8e9" stop-opacity=".8"/><stop offset="1" stop-color="#fff8e9" stop-opacity="0"/></radialGradient>
+  <linearGradient id="glass" x2="1"><stop stop-color="#fff9ea" stop-opacity=".38"/><stop offset=".47" stop-color="#fff9ea" stop-opacity=".06"/><stop offset="1" stop-color="#fff9ea" stop-opacity=".36"/></linearGradient>
+  <filter id="blur" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="24"/></filter>
+  <clipPath id="drink"><path d="M234 305 L472 305 L453 618 Q449 650 415 657 L291 657 Q257 649 255 618 Z"/></clipPath>
 </defs>
-<rect width="700" height="800" rx="42" fill="url(#bg)"/>
-<rect x="0" y="520" width="700" height="280" fill="#dcc6aa"/>
-<circle cx="525" cy="180" r="120" fill="url(#sun)"/>
-<ellipse cx="350" cy="650" rx="145" ry="28" fill="#4d3529" opacity=".18"/>
-<g opacity=".95">
-  <path d="M262 190h176c22 0 42 18 42 40v314c0 28-22 50-50 50H270c-28 0-50-22-50-50V230c0-22 18-40 42-40z" fill="#efe4d2"/>
-  <path d="M280 214h140c16 0 28 11 28 25v295c0 18-14 32-32 32H284c-18 0-32-14-32-32V239c0-14 12-25 28-25z" fill="#f9efdf"/>
-  <path d="M252 420h196v114c0 18-14 32-32 32H284c-18 0-32-14-32-32z" fill="#f2c995"/>
-  <path d="M252 364h196v56H252z" fill="#f7ddb0"/>
-  <path d="M252 300h196v64H252z" fill="#b84b54"/>
-  <path d="M252 262h196v38H252z" fill="#f2a04c"/>
-  <path d="M252 228h196v34H252z" fill="#6b3b29"/>
-  <path d="M240 210c0-15 13-27 30-27h160c17 0 30 12 30 27v10H240z" fill="#f2eadc" opacity=".65"/>
-  <path d="M280 240c-5 8-8 18-8 29v247c0 16 7 32 19 42" fill="none" stroke="#fff7ec" stroke-opacity=".55" stroke-width="18" stroke-linecap="round"/>
-  <g fill="#fff6e7" opacity=".75">
-    <rect x="300" y="310" width="38" height="38" rx="8" transform="rotate(-24 319 329)"/>
-    <rect x="360" y="345" width="42" height="42" rx="8" transform="rotate(17 381 366)"/>
-    <rect x="324" y="405" width="40" height="40" rx="8" transform="rotate(-21 344 425)"/>
-    <rect x="385" y="430" width="40" height="40" rx="8" transform="rotate(23 405 450)"/>
-  </g>
-  <path d="M281 217h138" stroke="#fff8ef" stroke-opacity=".52" stroke-width="5" stroke-linecap="round"/>
+<rect width="700" height="800" fill="url(#bg)"/>
+<circle cx="335" cy="255" r="348" fill="url(#sun)"/>
+<circle cx="584" cy="119" r="235" fill="#fff7ef" opacity=".085"/>
+<circle cx="101" cy="780" r="250" fill="#1f100b" opacity=".09"/>
+<path d="M-30 702 C190 636 473 671 730 609 V810 H-30Z" fill="#6f2e36" opacity=".15"/>
+<ellipse cx="351" cy="660" rx="212" ry="35" fill="#150b08" opacity=".22" filter="url(#blur)"/>
+<ellipse cx="355" cy="668" rx="170" ry="24" fill="#160e0a" opacity=".2"/>
+<path d="M229 294 Q222 300 229 360 L246 611 Q249 658 289 667 H417 Q456 659 458 611 L478 358 Q485 294 474 294 Z" fill="#f9f4e9" opacity=".48" stroke="#fff9ed" stroke-width="12"/>
+<g clip-path="url(#drink)">
+  <rect x="230" y="418" width="250" height="247" fill="#f49b3c"/>
+  <rect x="230" y="362" width="250" height="56" fill="#f1d2b0" opacity=".72"/>
+  <rect x="230" y="300" width="250" height="70" fill="#bc4554"/>
+  <path d="M227 359 Q315 378 362 361 T480 354 L476 285 H227Z" fill="#52301d"/>
+  <path d="M236 436 Q361 446 468 417" stroke="#ffd59b" stroke-width="7" opacity=".42" fill="none"/>
+  <rect x="272" y="370" width="48" height="43" rx="8" transform="rotate(-16 296 392)" fill="#fffdf2" opacity=".19" stroke="#fff9ef" stroke-width="6"/>
+  <rect x="395" y="391" width="48" height="43" rx="8" transform="rotate(17 419 413)" fill="#fffdf2" opacity=".19" stroke="#fff9ef" stroke-width="6"/>
+  <rect x="318" y="458" width="48" height="43" rx="8" transform="rotate(-22 342 480)" fill="#fffdf2" opacity=".19" stroke="#fff9ef" stroke-width="6"/>
+  <rect x="399" y="522" width="48" height="43" rx="8" transform="rotate(24 423 544)" fill="#fffdf2" opacity=".19" stroke="#fff9ef" stroke-width="6"/>
+  <rect x="284" y="558" width="48" height="43" rx="8" transform="rotate(12 308 580)" fill="#fffdf2" opacity=".19" stroke="#fff9ef" stroke-width="6"/>
+</g>
+<path d="M256 336 Q248 403 270 551" fill="none" stroke="#fffdf7" stroke-width="10" stroke-linecap="round" opacity=".4"/>
+<ellipse cx="352" cy="296" rx="124" ry="20" fill="#eedbc8" opacity=".55" stroke="#fff4e8" stroke-width="7"/>
+<ellipse cx="349" cy="297" rx="110" ry="14" fill="#5d3628" opacity=".98"/>
+<path d="M242 317 L475 317" stroke="url(#glass)" stroke-width="12" stroke-linecap="round"/>
+<path d="M325 304 C327 270 346 248 382 240" fill="none" stroke="#fff2b8" stroke-width="8" stroke-linecap="round" opacity=".8"/>
+<g transform="translate(496 508)">
+  <circle cx="0" cy="0" r="42" fill="#f09539"/>
+  <circle cx="0" cy="0" r="33" fill="#ffd28b"/>
+  <circle cx="0" cy="0" r="25" fill="none" stroke="#f0a54d" stroke-width="3"/>
+  <path d="M0-24V24M-24 0H24M-17-17L17 17M17-17L-17 17" stroke="#f6b65e" stroke-width="2.5" opacity=".45"/>
+  <path d="M18-28 C30-40 42-36 46-20" fill="none" stroke="#7a8f52" stroke-width="4" stroke-linecap="round"/>
+</g>
+<g>
+  <circle cx="180" cy="575" r="15" fill="#7b1430"/>
+  <circle cx="209" cy="552" r="12" fill="#8e1e3d"/>
+  <circle cx="213" cy="586" r="13" fill="#6d1029"/>
+  <path d="M176 560 C186 544 203 538 214 532" fill="none" stroke="#8ca266" stroke-width="4" stroke-linecap="round"/>
 </g>
 <g fill="#fff9f2">
   <text x="72" y="92" font-size="24" font-family="DM Sans, Arial, sans-serif" letter-spacing="6">SUNSET AMERICANO</text>
