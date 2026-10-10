@@ -36,3 +36,7 @@ New drinks can define `orderLabel` and `orderPreferences` in `data/recipes.json`
 Run `python make_illustrations.py` to recreate the editable SVG menu artwork.
 
 To update your existing repository, replace ONLY the files contained in the v3 GitHub update ZIP with their matching paths in the repository working folder, then commit and push using GitHub Desktop. Cloudflare Pages will redeploy without changing the NFC link.
+
+
+## Final consolidated update
+This package includes the homepage hero redesign plus the revised Sunset Americano recipe (60 ml cranberry juice, 50 ml orange juice, 50 ml soda water, double espresso).

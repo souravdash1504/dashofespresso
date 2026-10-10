@@ -209,12 +209,13 @@
       "Signature",
       "Fruity"
     ],
-    "badge": "Citrus sunset",
+    "badge": "Cranberry sunset",
     "serve": "Tall iced glass",
     "image": "images/sunset-americano.svg",
-    "description": "A sparkling citrus espresso with the layers reversed: espresso first, soda next, orange last.",
+    "description": "A vivid layered americano with cranberry, orange, soda and a double espresso finish.",
     "tags": [
       "sunset",
+      "cranberry",
       "orange",
       "juice",
       "soda",
@@ -228,20 +229,22 @@
     "prepTime": "5 min",
     "strength": "Medium",
     "ingredients": [
-      "80 ml chilled orange juice",
-      "60 ml chilled soda water",
+      "60 ml chilled cranberry juice",
+      "50 ml chilled orange juice",
+      "50 ml chilled soda water",
       "1 freshly pulled double-shot espresso (espresso machine)",
       "Ice, to fill the glass",
       "1 fresh orange slice, for garnish"
     ],
     "steps": [
       "Fill a serving glass with ice.",
-      "Pull one fresh double-shot espresso and pour it into the iced glass first.",
-      "Slowly add 60 ml chilled soda water over the espresso to limit foaming.",
-      "Gently pour in 80 ml chilled orange juice as the final liquid layer.",
+      "Pour 60 ml chilled cranberry juice over the ice.",
+      "Add 50 ml chilled orange juice.",
+      "Slowly pour in 50 ml chilled soda water.",
+      "Pull one fresh double-shot espresso and gently pour it on top as the final layer.",
       "Garnish with a fresh orange slice and serve immediately."
     ],
-    "notes": "The same ingredients as Sunrise Americano, but with the opposite pouring order. The liquids may naturally mingle rather than remain in perfectly separate layers.",
+    "notes": "Keep each ingredient well chilled for cleaner layers. The order matters: ice → cranberry → orange → soda → espresso.",
     "allergens": []
   },
   {
