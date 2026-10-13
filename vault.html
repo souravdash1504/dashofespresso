@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#281b13" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'" />
+  <title>The Secret Recipe Vault | Dash of Espresso</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="stylesheet" href="vault.css" />
+  <script src="vault.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="index.html"><span aria-hidden="true">✳</span> DASH OF <em>ESPRESSO</em></a>
+    <a class="back" href="index.html">← Back to the café</a>
+  </header>
+  <main class="container">
+    <div class="kicker">THE BARISTA'S PRIVATE CORNER · EST. AT HOME</div>
+    <section class="intro">
+      <div class="intro-copy">
+        <div class="eyebrow">✦ OWNER'S ARCHIVE</div>
+        <h1>Behind every cup,<br /><em>a little secret.</em></h1>
+        <p>Your personal notebook for grinder settings, bean picks, secret recipes and all those experiments worth remembering.</p>
+      </div>
+      <div class="vault-mark" aria-hidden="true"><div class="vault-glow">✳</div><span>PRIVATE<br/>BREW LOG</span></div>
+    </section>
+    <section id="loadingView" class="panel"><h2>Checking the vault…</h2><p>Loading encrypted data.</p></section>
+    <section id="errorView" class="panel" hidden><h2>Could not open vault</h2><p id="fatalMessage"></p><button id="retryBtn" class="btn ghost" type="button">Try again</button></section>
+    <section id="loginView" class="panel narrow" hidden>
+      <div class="panel-mark">✦ PRIVATE ACCESS</div>
+      <h2>You've found Mr. Sourav Dash's <em>Secret Recipe Vault.</em></h2>
+      <p class="muted">Please enter your password to unlock the barista's private notes.</p>
+      <form id="unlockForm">
+        <label for="unlockPassword">Vault password</label>
+        <input id="unlockPassword" type="password" autocomplete="current-password" minlength="1" required placeholder="Enter your private passphrase" />
+        <button class="btn primary" type="submit" id="unlockBtn">Unlock my vault →</button>
+      </form>
+      <p id="unlockMessage" class="status" role="status"></p>
+      <div class="security-note">🔒 Notes are encrypted in your browser. A strong password is necessary. No password is stored in your site's source code.</div>
+    </section>
+    <section id="setupView" class="panel narrow" hidden>
+      <div class="panel-mark">✦ FIRST-TIME SETUP</div>
+      <h2>Create your <em>private vault.</em></h2>
+      <p class="muted">There is no default password. Choose a strong, unique passphrase (at least 14 characters). You'll need it every time you unlock the vault.</p>
+      <form id="setupForm">
+        <label for="setupPassword">Choose a private passphrase</label>
+        <input id="setupPassword" type="password" autocomplete="new-password" minlength="14" required placeholder="14+ characters, ideally several random words" />
+        <label for="confirmPassword">Confirm passphrase</label>
+        <input id="confirmPassword" type="password" autocomplete="new-password" minlength="14" required placeholder="Repeat your passphrase" />
+        <button class="btn primary" type="submit" id="setupBtn">Create encrypted vault →</button>
+      </form>
+      <p id="setupMessage" class="status" role="status"></p>
+      <div class="security-note">After setup, the encrypted file downloads automatically. You must replace <code>vault-data.enc.json</code> in your GitHub repository and push it, or the public site will still be in setup mode. Keep your password safe: there is no password recovery.</div>
+    </section>
+    <section id="workspace" hidden>
+      <div class="workspace-head">
+        <div><div class="eyebrow">✦ VAULT UNLOCKED</div><h2>Your private <em>brew notes.</em></h2><p class="muted">A little wisdom behind every beautiful cup.</p></div>
+        <div class="workspace-actions"><button type="button" id="lockBtn" class="btn ghost">Lock vault</button><button type="button" id="downloadBtn" class="btn primary">Save & download encrypted file ↓</button></div>
+      </div>
+      <div class="hintbar"><strong>Important:</strong> Edits stay on this page until you download the new encrypted file and copy it into your repository. They are <em>not</em> saved to Cloudflare automatically. <span id="dirtyStatus" class="change-status">No unpublished edits</span></div>
+      <div class="stats" id="stats"></div>
+      <div class="controls"><label class="search"><span class="sr-only">Search notes</span><input id="searchNotes" type="search" placeholder="Search beans, settings, recipes…" /></label><label class="select-wrap"><span class="sr-only">Filter category</span><select id="categoryFilter"><option value="All">All categories</option><option>Grinder Settings</option><option>Beans &amp; Recommendations</option><option>Secret Recipes</option><option>Experiments</option><option>Other Notes</option></select></label><button type="button" id="newNoteBtn" class="btn dark">+ Add a note</button></div>
+      <div class="entries" id="entries" aria-live="polite"></div>
+      <section id="editorPanel" class="panel editor" hidden><div class="editor-header"><h3 id="editorHeading">New private note</h3><button type="button" id="cancelEditBtn" class="btn ghost compact">Cancel</button></div>
+        <form id="noteForm">
+          <div class="form-grid"><label>Note title <input name="title" id="noteTitle" required maxlength="120" placeholder="e.g. Best grind for Attikan Estate" /></label><label>Category <select name="category" id="noteCategory" required><option>Grinder Settings</option><option>Beans &amp; Recommendations</option><option>Secret Recipes</option><option>Experiments</option><option>Other Notes</option></select></label><label>Coffee bean / blend <input name="bean" id="noteBean" maxlength="200" placeholder="e.g. Ratnagiri Estate" /></label><label>Grinder &amp; grind setting <input name="grind" id="noteGrind" maxlength="200" placeholder="e.g. Instacuppa 25 / 40" /></label><label>Equipment / method <input name="equipment" id="noteEquipment" maxlength="200" placeholder="e.g. Espresso machine / French press" /></label><label>Recipe ratio / dose / yield <input name="ratio" id="noteRatio" maxlength="200" placeholder="e.g. 18 g in → 36 g out" /></label></div>
+          <label class="textarea-field">Private notes, ingredients &amp; instructions <textarea name="notes" id="noteBody" rows="6" maxlength="15000" placeholder="What worked, what didn't, secret recipe steps, tasting notes, bean recommendations…"></textarea></label>
+          <button type="submit" class="btn primary" id="saveNoteBtn">Keep this note in my vault</button>
+        </form>
+      </section>
+      <p class="bottom-note">Your notes are decrypted only in this browser session. Click <strong>Lock vault</strong> when you're finished.</p>
+    </section>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </main>
+  <footer>✳ DASH OF ESPRESSO <span>PRIVATE NOTES · BREWED WITH CARE</span></footer>
+</body>
+</html>
