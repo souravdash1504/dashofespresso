@@ -346,5 +346,59 @@
       "White sugar",
       "Stevia"
     ]
+  },
+  {
+    "id": "salted-caramel-iced-latte",
+    "name": "Salted Caramel Iced Latte",
+    "categories": [
+      "Iced",
+      "Signature"
+    ],
+    "badge": "Caramel cloud",
+    "serve": "Iced latte · 120 g milk + caramel cloud",
+    "image": "images/salted-caramel-iced-latte.svg",
+    "description": "Medium-dark espresso whipped with caramel, chilled milk and a soft salted-caramel cloud.",
+    "tags": [
+      "salted caramel",
+      "caramel cloud",
+      "hersheys",
+      "iced latte",
+      "medium dark roast",
+      "whipping cream",
+      "milk",
+      "espresso",
+      "less sweet"
+    ],
+    "brewMethod": "Espresso machine · double shot (36–40 g yield)",
+    "prepTime": "7 min",
+    "strength": "Rich · customizable sweetness",
+    "ingredients": [
+      "1 double-shot espresso (36–40 g liquid yield), using medium-dark roast beans",
+      "13–15 g Hershey’s caramel sauce (less sweet), or 20–22 g (sweeter), for the espresso",
+      "120 g chilled milk",
+      "Ice, as needed",
+      "For the caramel cloud: 25–30 ml whipping cream",
+      "For the caramel cloud: 10 ml milk",
+      "For the caramel cloud: 6–7 ml caramel sauce",
+      "For the caramel cloud: a small pinch of salt"
+    ],
+    "steps": [
+      "Pull a double-shot espresso from medium-dark roast beans, targeting 36–40 g of liquid espresso.",
+      "Add 13–15 g Hershey’s caramel sauce for a less-sweet latte, or 20–22 g for a sweeter version, to the main serving glass.",
+      "Pour the hot espresso into that glass and blend the caramel and espresso thoroughly using a handheld frother until smooth.",
+      "Add ice to the caramel-espresso mixture.",
+      "Pour in 120 g chilled milk.",
+      "In a separate pitcher, whisk or froth 25–30 ml whipping cream, 10 ml milk, 6–7 ml caramel sauce and a small pinch of salt into a soft, pourable caramel cloud.",
+      "Gently spoon or pour the salted caramel cloud over the latte and serve immediately."
+    ],
+    "notes": "The 36–40 g refers to brewed espresso yield, not the dry coffee dose. Caramel quantities for the main drink are chosen by the guest; the cloud uses an additional 6–7 ml caramel sauce. Mix caramel with hot espresso before adding ice.",
+    "allergens": [
+      "Dairy"
+    ],
+    "orderLabel": "Caramel sweetness",
+    "orderPreferences": [
+      "Less sweet · 13–15 g caramel sauce",
+      "Sweeter · 20–22 g caramel sauce"
+    ]
   }
 ]
