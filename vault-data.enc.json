@@ -1,4 +1,11 @@
 {
-  "status": "uninitialized",
-  "format": "dash-of-espresso-vault-v1"
+  "format": "dash-of-espresso-vault-v1",
+  "version": 1,
+  "kdf": "PBKDF2-SHA256",
+  "iterations": 450000,
+  "salt": "fex9u0AsJlcDA08MAIN5og==",
+  "cipher": "AES-256-GCM",
+  "iv": "dzMKyrg/lflgcbck",
+  "ciphertext": "SqSuYiPXOqSZ7zYP/b7tN++dVGbEeW4poAYoiZNatIRCSgb65PzZQbY+1pWd/sWB",
+  "updatedAt": "2026-10-13T11:50:56.345Z"
 }
