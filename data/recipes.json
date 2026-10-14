@@ -400,5 +400,100 @@
       "Less sweet · 13–15 g caramel sauce",
       "Sweeter · 20–22 g caramel sauce"
     ]
+  },
+  {
+    "id": "hot-americano",
+    "name": "Hot Americano",
+    "categories": [
+      "Hot"
+    ],
+    "badge": "Classic · Your strength",
+    "serve": "Double espresso + hot water",
+    "image": "images/hot-americano.svg",
+    "description": "Clean, aromatic black coffee made your way: strong, balanced or light.",
+    "tags": [
+      "americano",
+      "hot",
+      "black coffee",
+      "espresso",
+      "water",
+      "strong",
+      "balanced",
+      "mild",
+      "light"
+    ],
+    "brewMethod": "Espresso machine · double shot",
+    "prepTime": "3 min",
+    "strength": "Strong / balanced / light",
+    "ingredients": [
+      "1 freshly pulled double-shot espresso (32 g liquid yield in these examples)",
+      "Strong (1:2 espresso-to-water): 64 g hot water for 32 g espresso",
+      "Balanced / mild (1:3): 96 g hot water for 32 g espresso",
+      "Light (1:4): 128 g hot water for 32 g espresso"
+    ],
+    "steps": [
+      "Preheat a serving cup with hot water, then empty it.",
+      "Pull one double-shot espresso using your espresso machine. Weigh the liquid yield (32 g in the example).",
+      "Choose your strength: Strong uses 2 parts hot water per part espresso; Balanced uses 3; Light uses 4.",
+      "For a 32 g espresso yield, measure 64 g hot water (Strong), 96 g (Balanced) or 128 g (Light).",
+      "Pour the chosen hot-water amount into the cup, add the double-shot espresso, and serve immediately."
+    ],
+    "notes": "Ratios are espresso yield : added hot water by weight. If your double-shot yield is different, multiply the espresso yield by 2, 3 or 4. For example, a 36 g shot uses 72 g, 108 g or 144 g hot water.",
+    "allergens": [],
+    "orderLabel": "Coffee strength",
+    "orderPreferences": [
+      "Strong · 1:2 (32 g espresso + 64 g hot water)",
+      "Balanced / mild · 1:3 (32 g espresso + 96 g hot water)",
+      "Light · 1:4 (32 g espresso + 128 g hot water)"
+    ]
+  },
+  {
+    "id": "iced-americano",
+    "name": "Iced Americano",
+    "categories": [
+      "Iced"
+    ],
+    "badge": "Chilled · Your strength",
+    "serve": "Double espresso + 60–80 g ice",
+    "image": "images/iced-americano.svg",
+    "description": "Crisp, refreshing espresso over ice, tailored from bold to easy-sipping.",
+    "tags": [
+      "americano",
+      "iced",
+      "ice",
+      "black coffee",
+      "espresso",
+      "water",
+      "strong",
+      "balanced",
+      "mild",
+      "light",
+      "refreshing"
+    ],
+    "brewMethod": "Espresso machine · double shot",
+    "prepTime": "4 min",
+    "strength": "Strong / balanced / light",
+    "ingredients": [
+      "1 freshly pulled double-shot espresso (32 g liquid yield in these examples)",
+      "60–80 g ice, for all three versions",
+      "Strong: 50 g chilled water",
+      "Balanced / mild: 75 g chilled water (your preferred recipe)",
+      "Light: 100 g chilled water"
+    ],
+    "steps": [
+      "Pull one double-shot espresso, targeting a 32 g liquid yield.",
+      "Weigh 60–80 g ice into a serving glass.",
+      "For a strong iced Americano, add 50 g chilled water; for balanced / mild, add 75 g; for light, add 100 g.",
+      "Slowly pour the freshly pulled espresso over the ice and water.",
+      "Stir lightly and serve straight away. Add or reduce chilled water to suit the actual ice melt."
+    ],
+    "notes": "These are iced, melt-adjusted starting measurements based on your balanced standard of 32 g espresso + 75 g water + 60–80 g ice. Strong (50 g) and Light (100 g) scale around that baseline. Because melting ice adds water, these are NOT exact 1:2, 1:3 and 1:4 espresso-to-added-water ratios like the hot versions.",
+    "allergens": [],
+    "orderLabel": "Coffee strength",
+    "orderPreferences": [
+      "Strong · 32 g espresso + 50 g chilled water + 60–80 g ice",
+      "Balanced / mild · 32 g espresso + 75 g chilled water + 60–80 g ice",
+      "Light · 32 g espresso + 100 g chilled water + 60–80 g ice"
+    ]
   }
 ]

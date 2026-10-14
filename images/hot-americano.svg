@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="800" viewBox="0 0 700 800" role="img" aria-label="Illustrated hot Americano black coffee">
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#d9c8ad"/><stop offset="1" stop-color="#7d5a42"/></linearGradient>
+  <radialGradient id="sun"><stop stop-color="#fff8e9" stop-opacity=".78"/><stop offset="1" stop-color="#fff8e9" stop-opacity="0"/></radialGradient>
+  <linearGradient id="glass" x2="1"><stop stop-color="#fff9ea" stop-opacity=".38"/><stop offset=".47" stop-color="#fff9ea" stop-opacity=".06"/><stop offset="1" stop-color="#fff9ea" stop-opacity=".36"/></linearGradient>
+  <filter id="blur" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="24"/></filter>
+  <clipPath id="drink"><path d="M234 305 L472 305 L453 618 Q449 650 415 657 L291 657 Q257 649 255 618 Z"/></clipPath>
+</defs>
+<rect width="700" height="800" fill="url(#bg)"/>
+<circle cx="335" cy="255" r="348" fill="url(#sun)"/>
+<circle cx="584" cy="119" r="235" fill="#fff7ef" opacity=".085"/>
+<circle cx="101" cy="780" r="250" fill="#1f100b" opacity=".09"/>
+<path d="M-30 702 C190 636 473 671 730 609 V810 H-30Z" fill="#4b321f" opacity=".15"/>
+<ellipse cx="351" cy="660" rx="212" ry="35" fill="#150b08" opacity=".22" filter="url(#blur)"/>
+
+<ellipse cx="350" cy="662" rx="183" ry="25" fill="#352016" opacity=".24"/>
+<ellipse cx="351" cy="638" rx="203" ry="34" fill="#f8e7d0" stroke="#fcf4e6" stroke-width="11"/>
+<ellipse cx="352" cy="642" rx="153" ry="13" fill="#d6ae87" opacity=".65"/>
+<path d="M234 360 Q221 361 231 417 L258 554 Q269 607 341 616 H385 Q454 607 461 554 L486 417 Q497 359 485 357Z" fill="#f9ecdb" stroke="#fff7e8" stroke-width="13"/>
+<path d="M481 395 C578 363 573 528 467 508" fill="none" stroke="#faf0df" stroke-width="35"/>
+<path d="M481 395 C541 392 549 479 479 483" fill="none" stroke="#b78a68" stroke-width="10"/>
+<ellipse cx="357" cy="363" rx="136" ry="47" fill="#bd8251" stroke="#fff7e8" stroke-width="12"/>
+<ellipse cx="357" cy="363" rx="118" ry="37" fill="#392219"/>
+<path d="M268 363 Q331 346 389 360 Q426 372 452 354" fill="none" stroke="#a9774c" stroke-width="8" stroke-linecap="round" opacity=".65"/>
+<path d="M293 375 Q344 385 405 373" fill="none" stroke="#e1b17d" stroke-width="5" stroke-linecap="round" opacity=".4"/>
+<path d="M270 460 Q280 546 313 566" fill="none" stroke="#ffffff" stroke-width="13" stroke-linecap="round" opacity=".48"/>
+<path d="M251 437 Q277 457 291 454" stroke="#fffdf4" stroke-width="7" opacity=".45" fill="none"/>
+<g fill="none" stroke="#f5ddbc" stroke-width="7" stroke-linecap="round" opacity=".66">
+<path d="M281 268 Q258 244 278 216"/><path d="M351 269 Q335 241 348 209"/><path d="M426 269 Q413 246 434 218"/>
+</g>
+
+<text x="45" y="62" font-size="13" font-family="Arial,sans-serif" letter-spacing="4.1" fill="#4b321f" opacity=".64">DASH OF ESPRESSO</text>
+<g transform="translate(614 50)"><circle r="25" fill="none" stroke="#4b321f" opacity=".38"/><path d="M-12 0 H12 M0 -12 V12 M-8 -8 L8 8 M-8 8 L8 -8" stroke="#4b321f" stroke-width="1.6" opacity=".75"/></g>
+</svg>

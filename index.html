@@ -4,13 +4,55 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#251910" />
-  <meta name="description" content="A little coffee bar at home. Explore signature brews, discover recipes and request your favourite cup." />
+  <meta name="description" content="Sourav Dash’s home coffee bar — experimental specialty coffee, personal recipes, and zero refunds. Explore the Dash of Espresso menu." />
   <title>Dash of Espresso — Crafted, one cup at a time</title>
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Homepage copy only. The public menu, recipe data, and private vault remain unchanged. */
+    .hero-copy .hero-tagline {
+      max-width: 490px;
+      margin: -1px 0 14px;
+      color: #d5ad7e;
+      font-size: clamp(14px, 1.23vw, 17px);
+      font-weight: 700;
+      line-height: 1.55;
+      letter-spacing: .004em;
+    }
+    .hero-copy .hero-intro {
+      max-width: 500px;
+      margin: 0;
+      color: #dfd0c0;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .hero-copy .hero-disclaimer {
+      max-width: 500px;
+      margin: 26px 0 0;
+      padding: 3px 0 3px 18px;
+      border-left: 2px solid #c69b69;
+      color: #e6d4be;
+      font-family: Georgia, serif;
+      font-size: 13px;
+      font-style: italic;
+      line-height: 1.7;
+    }
+    .hero-copy .hero-actions { margin-top: 25px; flex-wrap: wrap; row-gap: 12px; }
+    .hero-copy .hero-note { margin-top: 27px; }
+    @media (max-width: 760px) {
+      .hero-copy .hero-tagline { font-size: 14px; margin: -1px 0 13px; }
+      .hero-copy .hero-intro { font-size: 13.5px; line-height: 1.8; }
+      .hero-copy .hero-disclaimer { font-size: 12.5px; margin-top: 24px; }
+      .hero-copy .hero-note { margin-top: 28px; }
+    }
+    @media (max-width: 390px) {
+      .hero-copy .eyebrow { font-size: 9px; letter-spacing: .12em; }
+      .hero-copy h1 { font-size: clamp(39px, 11.6vw, 47px); }
+    }
+  </style>
   <script src="config.js" defer></script>
   <script src="app.js" defer></script>
 </head>
@@ -32,14 +74,16 @@
   <main>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="sparkle">✦</span> A LITTLE CORNER OF COFFEE JOY</div>
-        <h1 id="hero-title">Good coffee.<br><em>Better company.</em></h1>
-        <p>Welcome to Dash of Espresso, Sourav’s home coffee bar. A little dash, a lot of coffee. Discover a cup you’ll love.</p>
+        <div class="eyebrow"><span class="sparkle">✦</span> DASH OF ESPRESSO · SOURAV’S HOME CAFÉ</div>
+        <h1 id="hero-title">Sourav’s home<br><em>coffee bar.</em></h1>
+        <p class="hero-tagline">Experimental coffee. Personal favourites. Zero refunds.</p>
+        <p class="hero-intro">Welcome to Dash of Espresso, where every cup starts as an experiment and ends up exactly how I like it. Good beans, curious combinations, and perhaps an unreasonable amount of enthusiasm.</p>
         <div class="hero-actions">
-          <a class="button button-cream" href="#menu">Explore our menu <span aria-hidden="true">↗</span></a>
-          <a class="hero-link" href="#story">What we're about <span aria-hidden="true">↓</span></a>
+          <a class="button button-cream" href="#menu">Explore the menu <span aria-hidden="true">↗</span></a>
+          <a class="hero-link" href="#story">Meet the barista <span aria-hidden="true">↓</span></a>
         </div>
-        <div class="hero-note"><span class="pulse-dot"></span> HANDCRAFTED AT HOME <span class="note-separator">/</span> NO PRICE TAG, JUST GOOD VIBES</div>
+        <p class="hero-disclaimer">If you love it, praise the barista. If you don’t, put on your happiest face and finish the cup anyway. Specialty beans are expensive, and the complaints department is just me.</p>
+        <div class="hero-note"><span class="pulse-dot"></span> HANDCRAFTED AT HOME <span class="note-separator">/</span> EVERY CUP EXPERIMENTALLY APPROVED</div>
       </div>
       <div class="hero-showcase" aria-label="Illustrated specialty iced coffee">
         <div class="showcase-frame">
