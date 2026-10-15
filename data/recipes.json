@@ -495,5 +495,58 @@
       "Balanced / mild · 32 g espresso + 75 g chilled water + 60–80 g ice",
       "Light · 32 g espresso + 100 g chilled water + 60–80 g ice"
     ]
+  },
+  {
+    "id": "mont-blanc",
+    "name": "Mont Blanc",
+    "categories": [
+      "Iced",
+      "Signature",
+      "Fruity"
+    ],
+    "badge": "Orange cold foam",
+    "serve": "Tall iced glass",
+    "image": "images/mont-blanc.svg",
+    "description": "Orange juice, double espresso and a silky orange cold foam for a bright, dessert-like coffee refresher.",
+    "tags": [
+      "mont blanc",
+      "orange juice",
+      "orange foam",
+      "cold foam",
+      "vanilla",
+      "espresso",
+      "iced",
+      "fruity"
+    ],
+    "brewMethod": "Espresso machine · double shot",
+    "prepTime": "5 min",
+    "strength": "Bright",
+    "ingredients": [
+      "60–80 ml chilled orange juice",
+      "1 freshly pulled double-shot espresso (espresso machine)",
+      "Ice, to fill the serving glass",
+      "For the orange cold foam: 25 ml whipping cream",
+      "For the orange cold foam: 10–12 ml milk",
+      "For the orange cold foam: 10–12 ml orange juice",
+      "For the orange cold foam: 6–7 ml vanilla syrup",
+      "For the orange cold foam: a pinch of salt"
+    ],
+    "steps": [
+      "Pour 60–80 ml chilled orange juice into the serving glass.",
+      "Add ice to fill the glass.",
+      "Pull one fresh double-shot espresso and gently pour it over the iced orange juice.",
+      "In a separate pitcher or frothing vessel, combine 25 ml whipping cream, 10–12 ml milk, 10–12 ml orange juice, 6–7 ml vanilla syrup and a pinch of salt.",
+      "Froth until light, creamy and softly pourable.",
+      "Top the drink with the orange cold foam and serve immediately."
+    ],
+    "notes": "For a brighter cup, use 80 ml orange juice. For a more coffee-forward version, stay near 60 ml. Keep everything well chilled for the cleanest layers.",
+    "allergens": [
+      "Dairy"
+    ],
+    "orderLabel": "Orange intensity",
+    "orderPreferences": [
+      "Balanced · 60 ml orange juice",
+      "Juicier · 80 ml orange juice"
+    ]
   }
 ]
