@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="motion.css" />
   <link rel="stylesheet" href="immersive.css" />
   <link rel="stylesheet" href="refined-hero.css" />
+  <link rel="stylesheet" href="cinematic.css" />
   <style>
     /* Homepage copy only. The public menu, recipe data, and private vault remain unchanged. */
     .hero-copy .hero-tagline {
@@ -79,22 +80,23 @@
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy entrance-copy">
+      <div class="hero-copy entrance-copy cinematic-copy">
         <div class="eyebrow"><span class="sparkle">✦</span> WELCOME TO DASH OF ESPRESSO</div>
         <h1 id="hero-title">Sourav’s home<br><em>coffee bar.</em></h1>
-        <p class="hero-tagline">A little curious. A little caffeinated. Entirely my kind of coffee.</p>
+        <p class="hero-tagline">Curious combinations. Carefully poured. Always personal.</p>
         <div class="hero-actions">
           <a class="button button-cream" href="#menu">Explore the menu <span aria-hidden="true">↗</span></a>
           <a class="hero-link" href="#story">Meet the barista <span aria-hidden="true">↓</span></a>
         </div>
-        <p class="hero-smallprint">☕ Made at home. Best enjoyed with an open mind.</p>
+        <a class="cinematic-scroll-cue" href="#menu" aria-label="Scroll to browse the coffee menu"><span class="cue-line" aria-hidden="true"></span> SCROLL TO EXPLORE</a>
+        <p class="hero-smallprint">SMALL BATCH. BIG CURIOSITY.</p>
       </div>
       <div class="hero-showcase entrance-art" id="brewLab" data-flavour="espresso" aria-label="Animated and interactive coffee brewer">
         <div class="lab-grain" aria-hidden="true"></div>
         <div class="lab-halo" aria-hidden="true"></div>
-        <span class="lab-edition">THE COFFEE LAB <span class="lab-edition-dot">✳</span> EST. AT HOME</span>
+        <span class="lab-edition">HANDCRAFTED AT HOME <span class="lab-edition-dot">✳</span> EST. AT HOME</span>
         <div class="brew-machine" aria-hidden="true">
-          <div class="brew-machine-top"><span class="machine-dot"></span><span>DASH / LAB</span><span class="machine-lines">▥</span></div>
+          <div class="brew-machine-top"><span class="machine-dot"></span><span>DASH / ESPRESSO</span><span class="machine-lines">▥</span></div>
           <div class="brew-machine-neck"></div>
           <div class="brew-stream"><i></i></div>
           <span class="brew-drop drop-one"></span><span class="brew-drop drop-two"></span>
@@ -132,32 +134,22 @@
           <span class="lab-steam steam-one"></span><span class="lab-steam steam-two"></span><span class="lab-steam steam-three"></span>
         </div>
         <div class="lab-controls" aria-label="Pick a drink to animate">
-          <p class="lab-kicker">PICK YOUR POUR <span class="lab-led"></span></p>
-          <h2 id="labDrinkName" aria-live="polite">The double shot.</h2>
+          <p class="lab-kicker">YOUR COFFEE · YOUR CALL <span class="lab-led"></span></p>
+          <h2 id="labDrinkName" aria-live="polite">Espresso, your way.</h2>
           <p id="labDrinkDesc">Freshly pulled. A little dramatic.</p>
           <div class="lab-switches" role="group" aria-label="Preview coffee experiments">
-            <button type="button" class="lab-switch is-current" data-brew="espresso" aria-pressed="true"><span>01</span> Espresso</button>
-            <button type="button" class="lab-switch" data-brew="sunset" aria-pressed="false"><span>02</span> Sunset</button>
-            <button type="button" class="lab-switch" data-brew="latte" aria-pressed="false"><span>03</span> Cloud latte</button>
+            <button type="button" class="lab-switch is-current" data-brew="espresso" aria-pressed="true">Espresso</button>
+            <button type="button" class="lab-switch" data-brew="sunset" aria-pressed="false">Sunset</button>
+            <button type="button" class="lab-switch" data-brew="latte" aria-pressed="false">Cloud latte</button>
           </div>
-          <div class="lab-bottom-row"><button type="button" id="pourAgain" class="lab-again">↻ Pour another shot</button><a href="#menu" class="lab-menu-link">Explore all the recipes ↗</a></div>
+          <div class="lab-bottom-row"><button type="button" id="pourAgain" class="lab-again">↻ Pour again</button><a href="#menu" class="lab-menu-link">See the menu ↗</a></div>
         </div>
       </div>
     </section>
 
-    <section class="intro-strip kinetic-strip" aria-label="Coffee bar philosophy"><div class="kinetic-track" aria-hidden="true">✳&nbsp; GOOD BEANS &nbsp; ✳&nbsp; QUESTIONABLE IDEAS &nbsp; ✳&nbsp; EXCELLENT COFFEE &nbsp; ✳&nbsp; NO REFUNDS &nbsp; ✳&nbsp; GOOD BEANS &nbsp; ✳&nbsp; QUESTIONABLE IDEAS &nbsp; ✳&nbsp; EXCELLENT COFFEE &nbsp; ✳&nbsp; NO REFUNDS &nbsp;</div></section>
-
-    <section class="brew-interlude" aria-label="The experience" id="experience">
-      <div class="interlude-number">01 / THE EXPERIMENT</div>
-      <p class="interlude-title">From <em>tiny ideas</em><br>to really good <span class="stroke-word">coffee.</span></p>
-      <p class="interlude-sub">Tap the little buttons. Watch the pour. Then find a cup worth obsessing over.</p>
-      <a href="#menu" class="interlude-arrow" aria-label="Scroll to the menu">↓</a>
-      <div class="interlude-bean bean-a" aria-hidden="true">✳</div><div class="interlude-bean bean-b" aria-hidden="true">✦</div>
-    </section>
-
     <section id="menu" class="menu-section" aria-labelledby="menu-title">
       <div class="section-heading">
-        <div><p class="section-kicker">01 — MADE FOR YOUR CRAVINGS</p><h2 id="menu-title">The coffee <em>edit.</em></h2></div>
+        <div><p class="section-kicker">THE MENU · MADE FOR YOUR CRAVINGS</p><h2 id="menu-title">The coffee <em>edit.</em></h2></div>
         <p>Espresso creations, bright refreshers and a little dessert indulgence. Find your next favourite.</p>
       </div>
       <div class="menu-tools">
@@ -170,51 +162,12 @@
       <p class="results-note" id="resultsNote" role="status"></p>
     </section>
 
-
-    <section class="coffee-film" aria-labelledby="coffee-film-title">
-      <div class="film-heading motion-reveal">
-        <p class="section-kicker">02 — AN EXPERIMENT IN PROGRESS</p>
-        <h2 id="coffee-film-title">A little science.<br><em>A little chaos.</em></h2>
-        <p>Every cup begins with a curious idea. Then the espresso starts flowing.</p>
-      </div>
-      <div class="film-stage motion-reveal" role="img" aria-label="Looping illustration of espresso dripping into a glass, with moving steam and swirling crema">
-        <div class="film-orbit orbit-one" aria-hidden="true"></div>
-        <div class="film-orbit orbit-two" aria-hidden="true"></div>
-        <svg class="coffee-animation" viewBox="0 0 540 440" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-          <defs>
-            <linearGradient id="espressoColor" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#b9753e"/><stop offset=".5" stop-color="#7d4628"/><stop offset="1" stop-color="#3a1d15"/></linearGradient>
-            <linearGradient id="glassEdge" x1="0" x2="1"><stop stop-color="#fff6df" stop-opacity=".9"/><stop offset=".5" stop-color="#fff6df" stop-opacity=".13"/><stop offset="1" stop-color="#fff6df" stop-opacity=".66"/></linearGradient>
-            <clipPath id="cupClip"><path d="M168 196 L373 196 L358 363 Q355 378 337 381 H206 Q187 379 183 363 Z"/></clipPath>
-          </defs>
-          <circle cx="270" cy="208" r="166" fill="#ad7952" opacity=".16" />
-          <ellipse cx="270" cy="388" rx="165" ry="14" fill="#100b08" opacity=".3"/>
-          <rect x="156" y="74" width="228" height="54" rx="15" fill="#30211a" stroke="#b58c68" stroke-width="3"/>
-          <rect x="199" y="128" width="143" height="18" rx="6" fill="#a58a70" />
-          <rect x="245" y="143" width="50" height="23" rx="7" fill="#594034" />
-          <path class="film-pour" d="M270 166 C264 210 276 243 270 296" fill="none" stroke="url(#espressoColor)" stroke-width="10" stroke-linecap="round"/>
-          <path d="M168 196 L373 196 L358 363 Q355 378 337 381 H206 Q187 379 183 363 Z" fill="#e5d0b0" opacity=".13" stroke="url(#glassEdge)" stroke-width="8"/>
-          <g clip-path="url(#cupClip)">
-            <rect class="film-coffee-fill" x="171" y="272" width="200" height="115" fill="url(#espressoColor)"/>
-            <path class="film-crema" d="M168 275 Q210 262 251 274 T370 272 L370 293 Q304 283 254 291 T168 287Z" fill="#dba46a" opacity=".96"/>
-            <circle class="film-bubble b1" cx="215" cy="290" r="5" fill="#f0cfaa"/>
-            <circle class="film-bubble b2" cx="306" cy="312" r="3" fill="#f0cfaa"/>
-            <circle class="film-bubble b3" cx="333" cy="296" r="4" fill="#f0cfaa"/>
-          </g>
-          <path d="M198 213 Q198 286 209 351" fill="none" stroke="#fff3dc" stroke-width="8" stroke-linecap="round" opacity=".5"/>
-          <path class="film-steam s1" d="M210 178 Q188 155 207 132 Q226 109 206 88" fill="none" stroke="#f7e2c7" stroke-width="5" stroke-linecap="round" opacity=".7"/>
-          <path class="film-steam s2" d="M325 180 Q347 156 326 136 Q310 116 331 92" fill="none" stroke="#f7e2c7" stroke-width="5" stroke-linecap="round" opacity=".5"/>
-        </svg>
-        <span class="film-label film-label-top">BREWING SOMETHING GOOD ✳</span>
-        <span class="film-label film-label-bottom">HANDCRAFTED · ONE CUP AT A TIME</span>
-      </div>
-    </section>
-
     <section class="story" id="story" aria-labelledby="story-title">
       <div class="barista-portrait motion-reveal">
         <div class="portrait-arch"><img class="barista-photo" src="images/sourav-barista.webp" width="900" height="1125" loading="lazy" decoding="async" alt="Sourav smiling in a brown barista apron, holding a cup of latte at the coffee counter" /></div>
         <div class="portrait-caption"><span>THE PERSON BEHIND THE POUR</span><strong>Sourav · Barista &amp; chief taste tester</strong></div>
       </div>
-      <div class="story-copy motion-reveal"><p class="section-kicker">03 — MEET THE BARISTA</p><h2 id="story-title">Meet Sourav.<br><em>Chief coffee overthinker.</em></h2><p>Hi, I'm Sourav. What began as a love for good coffee somehow became a home café, a website, and a suspicious number of experiments with beans, ratios and foam.</p><p>Some ideas are brilliant. Some are questionable. Every cup gets a fair shot — usually a double.</p><p class="barista-quote">If you love it, praise the barista. If you don't, please smile politely. The specialty beans weren't cheap, and the complaints department is just me.</p><span class="barista-signoff">— SOURAV · FOUNDER, HEAD BARISTA &amp; CHIEF TASTE TESTER</span><a href="#menu" class="story-link">Explore the experiments <span aria-hidden="true">↗</span></a></div>
+      <div class="story-copy motion-reveal"><p class="section-kicker">THE PERSON BEHIND THE COFFEE</p><h2 id="story-title">Meet Sourav.<br><em>Chief coffee overthinker.</em></h2><p>Hi, I'm Sourav. What began as a love for good coffee somehow became a home café, a website, and a suspicious number of experiments with beans, ratios and foam.</p><p>Some ideas are brilliant. Some are questionable. Every cup gets a fair shot — usually a double.</p><p class="barista-quote">If you love it, praise the barista. If you don't, please smile politely. The specialty beans weren't cheap, and the complaints department is just me.</p><span class="barista-signoff">— SOURAV · FOUNDER, HEAD BARISTA &amp; CHIEF TASTE TESTER</span><a href="#menu" class="story-link">Explore the experiments <span aria-hidden="true">↗</span></a></div>
     </section>
   </main>
 

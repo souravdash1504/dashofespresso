@@ -1,17 +1,7 @@
-DASH OF ESPRESSO — REFINED HERO UPDATE
+DASH OF ESPRESSO — Quietly Cinematic Update
 
-Changes:
-- Shorter minimalist homepage message and calmer layout.
-- Interactive cup fully visible with a separate controls panel (no overlap).
-- Existing 3 coffee selectors and replay button remain functional.
-- Current barista photo and Meet the Barista section remain intact.
-- Menu, private vault, NFC URL, recipes, images all remain unchanged.
+Copy index.html and cinematic.css to the root of your current GitHub repository. Do not delete any existing CSS or JS files. This update assumes immersive.css, refined-hero.css, motion.css, immersive.js, motion.js already exist, along with styles.css, app.js, images, and data.
 
-HOW TO INSTALL:
-1. Extract this archive.
-2. Copy index.html and refined-hero.css into the ROOT of your current GitHub repository.
-3. Keep existing styles.css, immersive.css, immersive.js, motion.css, motion.js, app.js, data/, images/ and vault files.
-4. In GitHub Desktop commit and push to origin, then refresh the Cloudflare page.
-5. If the old page is cached, refresh with browser cache bypass/reload.
+What changed: Removed the duplicative numbered interlude and coffee-film; kept the animated interactive hero, menu, portrait and vault. Removed repeated 01/02/03 labels. The original menu data and vault are not part of this package.
 
-This patch assumes you already installed the immersive website and barista photo updates.
+GitHub Desktop → Commit → Push origin. Cloudflare Pages retains the same URL/NFC destination.

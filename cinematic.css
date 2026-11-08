@@ -1,0 +1,105 @@
+/* DASH OF ESPRESSO • QUIETLY CINEMATIC
+   One opening story: the pour → the menu → the person.
+   Override-only update; existing menu and vault logic are unchanged. */
+:root { --cinematic-cream:#f8f0e4; --cinematic-copper:#cb9c69; --cinematic-dark:#21140e; }
+html { scroll-behavior:smooth; }
+.site-header { background:#f7f3eb; border-bottom:1px solid #e8ddcb; }
+/* No numbered episodes or filler panels between the visitor and the coffee. */
+.hero {
+  min-height:min(780px, calc(100svh - 78px));
+  grid-template-columns:minmax(0,1.03fr) minmax(0,.97fr);
+  background:radial-gradient(ellipse at 62% 62%,#43281c 0,#28180f 48%,#1d130e 100%);
+  overflow:hidden;
+}
+.hero-copy {
+  padding:clamp(46px,5.7vw,88px) clamp(24px,4vw,78px) clamp(36px,4vw,60px) clamp(24px,7vw,114px);
+  min-width:0;
+}
+.hero-copy .eyebrow {letter-spacing:.21em;color:#d9b38c;}
+.hero-copy h1 {max-width:620px;font-size:clamp(54px,5.75vw,98px);line-height:1.07;letter-spacing:-.057em;margin:30px 0 22px;}
+.hero-copy h1 em {color:#d2a57a;}
+.hero-copy .hero-tagline {max-width:415px;font-size:clamp(15px,1.25vw,18px);line-height:1.7;color:#e6d5c0;font-weight:400;}
+.hero-actions {margin-top:31px;}
+.hero-actions .button-cream {border-radius:40px;padding:17px 23px;background:#f6e9d4;box-shadow:0 8px 24px #0e090615;}
+.hero-actions .button-cream:hover {background:#fff4df;transform:translateY(-3px);}
+.hero-copy .hero-smallprint{display:none;}
+.cinematic-scroll-cue {display:inline-flex;align-items:center;gap:13px;align-self:flex-start;color:#c6a88c;font:700 9px/1.3 var(--sans);letter-spacing:.23em;margin-top:55px;transition:color .2s;}
+.cinematic-scroll-cue:hover{color:#f0d2a8;}
+.cue-line {width:43px;height:1px;background:#b58a67;display:inline-block;position:relative;overflow:hidden;}
+.cue-line::before {content:"";position:absolute;width:18px;inset:0 auto 0 -18px;background:#fff4d5;animation:cueTravel 2.7s ease-in-out infinite;}
+@keyframes cueTravel {to{transform:translateX(65px)}}
+/* Make the stage atmospheric and genuinely part of the hero. */
+.hero-showcase {min-height:690px;grid-template-rows:minmax(440px,1fr) auto;
+ background:radial-gradient(ellipse at 55% 45%,#8e5b3c 0,#5b3726 38%,#2a1a14 85%,#21150f 100%);
+ border-left:1px solid #a77c512a;
+}
+.lab-grain {opacity:.17;}
+.lab-halo {top:42%;width:min(78%,460px);background:#e6b67e;opacity:.27;box-shadow:0 0 110px 65px #e7b17a2b;}
+.lab-edition {color:#ebc99e;opacity:.82;top:22px;left:27px;letter-spacing:.22em;}
+.brew-machine {top:3%;filter:drop-shadow(0 18px 24px #160b0760);}
+.lab-glass-wrap {top:17%;width:min(57%,312px);max-width:312px;filter:drop-shadow(0 30px 28px #12090485);}
+.lab-orbit {opacity:.22;border-color:#f5cf9c88;}
+.lab-star{opacity:.3;}
+.lab-controls {position:relative;grid-row:2;bottom:auto;left:auto;right:auto;z-index:8;align-self:end;
+ margin:0 clamp(18px,4vw,40px) clamp(24px,3vw,36px);
+ padding:20px 22px 17px;
+ border:1px solid #e2b88958;border-radius:16px;
+ background:linear-gradient(145deg,#302118f4,#241812f6);box-shadow:0 16px 48px #12090570;
+}
+.lab-kicker {color:#d0ab87;letter-spacing:.17em;}
+.lab-controls h2 {font-size:clamp(25px,2.2vw,31px);letter-spacing:-.035em;margin:7px 0 13px;}
+.lab-controls p:not(.lab-kicker){display:none;}
+.lab-switches{gap:7px;}
+.lab-switch {background:transparent;border:1px solid #83644f;color:#e8d3ba;border-radius:40px;padding:10px 16px;font-size:11px;letter-spacing:.015em;}
+.lab-switch:hover {background:#58402e;transform:translateY(-2px);}
+.lab-switch.is-current {background:#f5e8d4;border-color:#f5e8d4;color:#352219;}
+.lab-bottom-row {margin-top:15px;padding-top:13px;border-top:1px solid #99775740;}
+.lab-menu-link {color:#ead3b8;}
+/* Menu begins immediately after the opening — no extra narrative chapters. */
+.menu-section {padding-top:clamp(72px,7vw,110px);}
+.menu-section .section-kicker,.story .section-kicker {color:#9c714e;letter-spacing:.17em;font-size:10px;}
+.section-heading h2 {letter-spacing:-.05em;}
+.menu-grid .drink-card {transition:transform .35s ease,filter .35s ease;}
+.menu-grid .drink-card:hover {transform:translateY(-6px) rotate(0);filter:drop-shadow(0 16px 18px #56351b14);}
+/* Let the barista portrait be the closing chapter, not another numbered page. */
+.story {scroll-margin-top:50px;}
+.story .portrait-arch {box-shadow:0 20px 65px #3c241022;}
+.story-copy .section-kicker {margin-bottom:17px;}
+@media (max-width:1100px) and (min-width:761px) {
+  .hero {grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+  .hero-copy{padding-left:5vw;padding-right:25px;}
+  .hero-copy h1{font-size:clamp(51px,5vw,76px);}
+  .hero-showcase{min-height:675px;}
+  .lab-glass-wrap{width:min(68%,280px);}
+  .lab-controls{margin:0 16px 21px;padding:18px 17px;}
+}
+@media (max-width:760px) {
+  .hero {display:flex;flex-direction:column;min-height:0;}
+  .hero-copy {padding:51px 23px 25px;}
+  .hero-copy h1 {font-size:clamp(48px,11.5vw,71px);line-height:1.09;margin:20px 0 18px;}
+  .hero-copy .hero-tagline {font-size:14px;line-height:1.63;max-width:320px;}
+  .hero-actions {margin-top:23px;gap:16px;}
+  .cinematic-scroll-cue {margin-top:24px;}
+  .hero-showcase{min-height:590px;height:auto;grid-template-rows:minmax(369px,1fr) auto;border-left:0;border-top:1px solid #87603c49;}
+  .brew-machine {width:160px;top:0;}
+  .lab-glass-wrap {top:14%;width:min(70%,282px);max-width:282px;}
+  .lab-halo{top:35%;}
+  .lab-controls{margin:0 17px 20px;padding:15px 16px;border-radius:14px;}
+  .lab-controls h2 {font-size:25px;margin-bottom:10px;}
+  .lab-switch {padding:10px 14px;font-size:11px;}
+  .lab-bottom-row{flex-direction:row;flex-wrap:wrap;}
+  .menu-section{padding-top:65px;}
+}
+@media(max-width:390px){
+  .hero-copy{padding:43px 19px 25px;}
+  .hero-copy h1{font-size:clamp(43px,11.2vw,54px);}
+  .hero-showcase{min-height:565px;grid-template-rows:minmax(350px,1fr) auto;}
+  .lab-glass-wrap{top:13%;width:min(69%,260px);}
+  .lab-controls{margin:0 12px 15px;padding:14px 13px;}
+  .lab-switch{padding:9px 11px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .cue-line::before{animation:none;}
+  .lab-glass-wrap{transform:translate(-50%,0)!important;}
+  .lab-switch{transition:none;}
+}
