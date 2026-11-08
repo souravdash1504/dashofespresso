@@ -12,11 +12,55 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="motion.css" />
-  <link rel="stylesheet" href="luxury-hero.css" />
-<script src="config.js" defer></script>
+  <link rel="stylesheet" href="immersive.css" />
+  <link rel="stylesheet" href="refined-hero.css" />
+  <link rel="stylesheet" href="cinematic.css" />
+  <style>
+    /* Homepage copy only. The public menu, recipe data, and private vault remain unchanged. */
+    .hero-copy .hero-tagline {
+      max-width: 490px;
+      margin: -1px 0 14px;
+      color: #d5ad7e;
+      font-size: clamp(14px, 1.23vw, 17px);
+      font-weight: 700;
+      line-height: 1.55;
+      letter-spacing: .004em;
+    }
+    .hero-copy .hero-intro {
+      max-width: 500px;
+      margin: 0;
+      color: #dfd0c0;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .hero-copy .hero-disclaimer {
+      max-width: 500px;
+      margin: 26px 0 0;
+      padding: 3px 0 3px 18px;
+      border-left: 2px solid #c69b69;
+      color: #e6d4be;
+      font-family: Georgia, serif;
+      font-size: 13px;
+      font-style: italic;
+      line-height: 1.7;
+    }
+    .hero-copy .hero-actions { margin-top: 25px; flex-wrap: wrap; row-gap: 12px; }
+    .hero-copy .hero-note { margin-top: 27px; }
+    @media (max-width: 760px) {
+      .hero-copy .hero-tagline { font-size: 14px; margin: -1px 0 13px; }
+      .hero-copy .hero-intro { font-size: 13.5px; line-height: 1.8; }
+      .hero-copy .hero-disclaimer { font-size: 12.5px; margin-top: 24px; }
+      .hero-copy .hero-note { margin-top: 28px; }
+    }
+    @media (max-width: 390px) {
+      .hero-copy .eyebrow { font-size: 9px; letter-spacing: .12em; }
+      .hero-copy h1 { font-size: clamp(39px, 11.6vw, 47px); }
+    }
+  </style>
+  <script src="config.js" defer></script>
   <script src="app.js" defer></script>
   <script src="motion.js" defer></script>
-  <script src="luxury-hero.js" defer></script>
+  <script src="immersive.js" defer></script>
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"><span id="scrollProgressFill"></span></div>
@@ -28,37 +72,85 @@
     </a>
     <nav aria-label="Main navigation">
       <a href="#menu">The menu</a>
-      <a href="#story" class="nav-story">About</a>
+      <a href="#story" class="nav-story">Our story</a>
       <a href="vault.html" class="nav-story" title="Private coffee notes">✦ Vault</a>
       <a class="nav-cta" href="#menu">Find your cup <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
 
   <main>
-    <section class="hero luxury-hero" aria-labelledby="hero-title" id="home">
-      <div class="luxury-visual" aria-hidden="true">
-        <img class="luxury-visual-image" src="images/hero-coffee-cinematic.webp" width="782" height="720" fetchpriority="high" alt="" />
-        <div class="luxury-visual-shade"></div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy entrance-copy cinematic-copy">
+        <div class="eyebrow"><span class="sparkle">✦</span> WELCOME TO DASH OF ESPRESSO</div>
+        <h1 id="hero-title">Sourav’s home<br><em>coffee bar.</em></h1>
+        <p class="hero-tagline">Curious combinations. Carefully poured. Always personal.</p>
+        <div class="hero-actions">
+          <a class="button button-cream" href="#menu">Explore the menu <span aria-hidden="true">↗</span></a>
+          <a class="hero-link" href="#story">Meet the barista <span aria-hidden="true">↓</span></a>
+        </div>
+        <a class="cinematic-scroll-cue" href="#menu" aria-label="Scroll to browse the coffee menu"><span class="cue-line" aria-hidden="true"></span> SCROLL TO EXPLORE</a>
+        <p class="hero-smallprint">SMALL BATCH. BIG CURIOSITY.</p>
       </div>
-      <div class="luxury-hero-copy">
-        <p class="luxury-kicker">SOURAV’S HOME COFFEE BAR</p>
-        <h1 id="hero-title">A home for<br><em>coffee experiments.</em></h1>
-        <p class="luxury-intro">Curious brews, unexpected combinations, and a little coffee science. All from my home bar.</p>
-        <div class="luxury-actions">
-          <a class="luxury-cta luxury-cta-primary" href="#menu">Explore the menu <span aria-hidden="true">↗</span></a>
-          <a class="luxury-cta luxury-cta-secondary" href="#story">Meet the barista</a>
+      <div class="hero-showcase entrance-art" id="brewLab" data-flavour="espresso" aria-label="Animated and interactive coffee brewer">
+        <div class="lab-grain" aria-hidden="true"></div>
+        <div class="lab-halo" aria-hidden="true"></div>
+        <span class="lab-edition">HANDCRAFTED AT HOME <span class="lab-edition-dot">✳</span> EST. AT HOME</span>
+        <div class="brew-machine" aria-hidden="true">
+          <div class="brew-machine-top"><span class="machine-dot"></span><span>DASH / ESPRESSO</span><span class="machine-lines">▥</span></div>
+          <div class="brew-machine-neck"></div>
+          <div class="brew-stream"><i></i></div>
+          <span class="brew-drop drop-one"></span><span class="brew-drop drop-two"></span>
+        </div>
+        <div class="lab-glass-wrap" aria-hidden="true">
+          <div class="lab-orbit orbit-a"></div><div class="lab-orbit orbit-b"></div>
+          <span class="lab-star star-one">✦</span><span class="lab-star star-two">✳</span>
+          <svg class="lab-glass" viewBox="0 0 350 410" xmlns="http://www.w3.org/2000/svg" focusable="false">
+            <defs>
+              <clipPath id="labClip"><path d="M74 95 L275 95 L257 344 Q255 365 234 370 H117 Q94 365 92 344 Z"/></clipPath>
+              <linearGradient id="liquidEsp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e1aa6b"/><stop offset=".18" stop-color="#ad6538"/><stop offset="1" stop-color="#4c261b"/></linearGradient>
+              <linearGradient id="liquidSunset" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b3b26"/><stop offset=".3" stop-color="#f8ae45"/><stop offset=".57" stop-color="#f47b36"/><stop offset="1" stop-color="#b21851"/></linearGradient>
+              <linearGradient id="liquidLatte" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a7663d"/><stop offset=".3" stop-color="#c79a6a"/><stop offset="1" stop-color="#f0d4ac"/></linearGradient>
+              <linearGradient id="glassShine" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#fff" stop-opacity=".78"/><stop offset=".43" stop-color="#fff" stop-opacity=".03"/><stop offset="1" stop-color="#fff" stop-opacity=".50"/></linearGradient>
+            </defs>
+            <ellipse cx="177" cy="387" rx="125" ry="16" fill="#332014" opacity=".26"/>
+            <g class="glass-float">
+              <path d="M72 91 Q70 83 81 82 H270 Q282 83 279 94 L261 344 Q257 373 237 376 H115 Q91 374 89 345 Z" fill="#fff4e0" fill-opacity=".28" stroke="#fff6e6" stroke-width="8"/>
+              <g clip-path="url(#labClip)">
+                <rect class="liquid liquid-espresso" x="72" y="145" width="212" height="228" fill="url(#liquidEsp)"/>
+                <rect class="liquid liquid-sunset" x="72" y="145" width="212" height="228" fill="url(#liquidSunset)"/>
+                <rect class="liquid liquid-latte" x="72" y="145" width="212" height="228" fill="url(#liquidLatte)"/>
+                <path class="lab-crema" d="M69 149 Q115 136 158 151 T282 148 L282 165 Q215 159 166 165 T69 160Z" fill="#e6bf83"/>
+                <g class="lab-ice"><rect x="113" y="190" width="54" height="54" rx="11" transform="rotate(-19 140 218)" fill="#fff7e5" opacity=".28" stroke="#fff7e5" stroke-width="3"/><rect x="205" y="234" width="47" height="47" rx="10" transform="rotate(17 228 257)" fill="#fff7e5" opacity=".24" stroke="#fff7e5" stroke-width="3"/><rect x="138" y="295" width="52" height="52" rx="10" transform="rotate(12 162 321)" fill="#fff7e5" opacity=".2" stroke="#fff7e5" stroke-width="3"/></g>
+                <circle class="lab-bubble bubble-1" cx="124" cy="265" r="4" fill="#fff9e7"/><circle class="lab-bubble bubble-2" cx="224" cy="304" r="3" fill="#fff9e7"/><circle class="lab-bubble bubble-3" cx="203" cy="216" r="3" fill="#fff9e7"/>
+              </g>
+              <path d="M100 119 Q98 216 109 321" stroke="url(#glassShine)" stroke-width="9" fill="none" stroke-linecap="round" opacity=".85"/>
+              <path d="M250 116 Q254 215 242 323" stroke="#fffcf4" stroke-width="4" opacity=".25" fill="none" stroke-linecap="round"/>
+              <ellipse cx="175" cy="95" rx="104" ry="16" fill="#fff8e8" opacity=".28" stroke="#fff9e9" stroke-width="5"/>
+              <ellipse cx="175" cy="94" rx="94" ry="11" fill="#542e20" opacity=".64"/>
+            </g>
+            <g class="lab-orange"><circle cx="265" cy="149" r="40" fill="#ffe0a1"/><circle cx="265" cy="149" r="33" fill="#ee911b"/><circle cx="265" cy="149" r="26" fill="#ffcc60"/><path d="M265 124V174M240 149H290M247 131L283 167M283 131L247 167" stroke="#fff2c2" stroke-width="3"/></g>
+            <g class="lab-foam"><path d="M97 97 Q85 82 107 70 Q109 45 134 53 Q153 33 176 47 Q205 31 225 54 Q252 46 252 70 Q275 77 263 99 Q199 119 165 104 Q124 122 97 97" fill="#f5e4c9" stroke="#fff8e9" stroke-width="5"/><path d="M122 83 Q177 66 234 82" fill="none" stroke="#d4b891" stroke-width="4" opacity=".6"/></g>
+          </svg>
+          <span class="lab-steam steam-one"></span><span class="lab-steam steam-two"></span><span class="lab-steam steam-three"></span>
+        </div>
+        <div class="lab-controls" aria-label="Pick a drink to animate">
+          <p class="lab-kicker">YOUR COFFEE · YOUR CALL <span class="lab-led"></span></p>
+          <h2 id="labDrinkName" aria-live="polite">Espresso, your way.</h2>
+          <p id="labDrinkDesc">Freshly pulled. A little dramatic.</p>
+          <div class="lab-switches" role="group" aria-label="Preview coffee experiments">
+            <button type="button" class="lab-switch is-current" data-brew="espresso" aria-pressed="true">Espresso</button>
+            <button type="button" class="lab-switch" data-brew="sunset" aria-pressed="false">Sunset</button>
+            <button type="button" class="lab-switch" data-brew="latte" aria-pressed="false">Cloud latte</button>
+          </div>
+          <div class="lab-bottom-row"><button type="button" id="pourAgain" class="lab-again">↻ Pour again</button><a href="#menu" class="lab-menu-link">See the menu ↗</a></div>
         </div>
       </div>
-      <a href="#menu" class="luxury-scroll" aria-label="Scroll to explore the coffee menu">
-        <span class="luxury-mouse" aria-hidden="true"></span>
-        <span>SCROLL TO EXPLORE</span>
-      </a>
     </section>
 
     <section id="menu" class="menu-section" aria-labelledby="menu-title">
       <div class="section-heading">
-        <div><p class="section-kicker">MADE TO BE DISCOVERED</p><h2 id="menu-title">Find your <em>cup.</em></h2></div>
-        <p>A few classics. A few experiments. Every cup made with curiosity.</p>
+        <div><p class="section-kicker">THE MENU · MADE FOR YOUR CRAVINGS</p><h2 id="menu-title">The coffee <em>edit.</em></h2></div>
+        <p>Espresso creations, bright refreshers and a little dessert indulgence. Find your next favourite.</p>
       </div>
       <div class="menu-tools">
         <div class="filter-list" id="categoryFilters" role="group" aria-label="Filter drinks by category"></div>
@@ -75,18 +167,11 @@
         <div class="portrait-arch"><img class="barista-photo" src="images/sourav-barista.webp" width="900" height="1125" loading="lazy" decoding="async" alt="Sourav smiling in a brown barista apron, holding a cup of latte at the coffee counter" /></div>
         <div class="portrait-caption"><span>THE PERSON BEHIND THE POUR</span><strong>Sourav · Barista &amp; chief taste tester</strong></div>
       </div>
-      <div class="story-copy motion-reveal">
-        <p class="section-kicker">BEHIND THE BAR</p>
-        <h2 id="story-title">Meet Sourav.<br><em>Professional coffee overthinker.</em></h2>
-        <p>I started with good beans and a little curiosity. Somehow, that turned into a home café, a website, and more coffee experiments than I care to count.</p>
-        <p class="barista-quote">Everything here is tested to my taste. If you love it, tell the barista. If not, please smile anyway — those beans weren't cheap.</p>
-        <span class="barista-signoff">— SOURAV · FOUNDER, BARISTA &amp; CHIEF TASTE TESTER</span>
-        <a href="#menu" class="story-link">Find a cup worth trying <span aria-hidden="true">↗</span></a>
-      </div>
+      <div class="story-copy motion-reveal"><p class="section-kicker">THE PERSON BEHIND THE COFFEE</p><h2 id="story-title">Meet Sourav.<br><em>Chief coffee overthinker.</em></h2><p>Hi, I'm Sourav. What began as a love for good coffee somehow became a home café, a website, and a suspicious number of experiments with beans, ratios and foam.</p><p>Some ideas are brilliant. Some are questionable. Every cup gets a fair shot — usually a double.</p><p class="barista-quote">If you love it, praise the barista. If you don't, please smile politely. The specialty beans weren't cheap, and the complaints department is just me.</p><span class="barista-signoff">— SOURAV · FOUNDER, HEAD BARISTA &amp; CHIEF TASTE TESTER</span><a href="#menu" class="story-link">Explore the experiments <span aria-hidden="true">↗</span></a></div>
     </section>
   </main>
 
-  <footer class="footer"><div><span class="footer-star">✳</span><span class="footer-title">DASH OF ESPRESSO</span><span class="footer-sub">BREWED WITH LOVE, SERVED WITH A SMILE.</span></div><a href="vault.html" title="Owner-only encrypted recipe vault">✦ Barista’s secret vault</a><a href="#top">Back to top ↑</a><p>Personal home coffee bar · Crafted and curated by Sourav.</p></footer>
+  <footer class="footer"><div><span class="footer-star">✳</span><span class="footer-title">DASH OF ESPRESSO</span><span class="footer-sub">BREWED WITH LOVE, SERVED WITH A SMILE.</span></div><a href="vault.html" title="Owner-only encrypted recipe vault">✦ Barista’s secret vault</a><a href="#top">Back to top ↑</a><p>Personal home coffee bar · Recipes curated by Sourav · Illustrations are original digital artwork.</p></footer>
 
   <dialog id="recipeDialog" class="panel-dialog" aria-labelledby="recipeTitle">
     <div class="dialog-inner"><button type="button" class="dialog-close" data-close="recipeDialog" aria-label="Close recipe">×</button><div id="recipeContent"></div></div>
