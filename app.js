@@ -123,6 +123,13 @@
       ? drink.orderPreferences : defaults;
     $("#preferenceLabel").textContent = drink.orderLabel || "Preference";
     options.forEach(label => { const option = el("option", "", label); option.value = label; preference.append(option); });
+    // Hot Cappuccino has a separate milk choice, while keeping its sweetener dropdown.
+    const milkField = $("#cappuccinoMilkField");
+    if (milkField) {
+      milkField.hidden = drink.id !== "hot-cappuccino";
+      milkField.style.display = milkField.hidden ? "none" : "flex";
+      if (!milkField.hidden) $("#cappuccinoMilk").value = "Regular Milk";
+    }
     $("#orderFeedback").textContent = "";
     showDialog($("#orderDialog"));
   }
@@ -132,10 +139,30 @@
     const guest = $("#guestName").value.trim();
     if (!guest) { $("#guestName").focus(); return null; }
     const notes = $("#orderNotes").value.trim();
-    return `☕ COFFEE REQUEST — ${config.cafeName || "Dash of Espresso"}\nName: ${guest}\nDrink: ${state.activeDrink.name}\nServing: ${$("#serving").textContent}\n${state.activeDrink.orderLabel || "Preference"}: ${$("#preference").value}\n${notes ? `Note: ${notes}\n` : ""}Please let me know if you can make this!`;
+    const milkChoice = state.activeDrink.id === "hot-cappuccino"
+      ? `Milk: ${$("#cappuccinoMilk").value}\n` : "";
+    return `☕ COFFEE REQUEST — ${config.cafeName || "Dash of Espresso"}\nName: ${guest}\nDrink: ${state.activeDrink.name}\nServing: ${$("#serving").textContent}\n${milkChoice}${state.activeDrink.orderLabel || "Preference"}: ${$("#preference").value}\n${notes ? `Note: ${notes}\n` : ""}Please let me know if you can make this!`;
   }
   function feedback(message) { $("#orderFeedback").textContent = message; }
   function initOrdering() {
+    // Inject the milk selector without modifying the HTML or other drinks.
+    const milkField = el("label", "field");
+    milkField.id = "cappuccinoMilkField";
+    milkField.hidden = true;
+    milkField.style.display = "none";
+    const milkTitle = el("span", "", "Milk preference");
+    const milkSelect = el("select");
+    milkSelect.id = "cappuccinoMilk";
+    milkSelect.name = "cappuccinoMilk";
+    ["Regular Milk", "Lactose-Free Milk", "Oat Milk"].forEach(milk => {
+      const option = el("option", "", milk);
+      option.value = milk;
+      milkSelect.append(option);
+    });
+    milkField.append(milkTitle, milkSelect);
+    const servingField = $("#serving").closest(".form-row");
+    if (servingField) servingField.after(milkField);
+    else $("#preference").closest(".field").after(milkField);
     const wa = String(config.whatsappNumber || "").replace(/\D/g, "");
     const email = String(config.orderEmail || "").trim();
     $("#whatsappOrder").hidden = !wa;

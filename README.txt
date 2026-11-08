@@ -1,7 +1,11 @@
-DASH OF ESPRESSO — Quietly Cinematic Update
+Dash of Espresso — Hot Cappuccino milk options update
 
-Copy index.html and cinematic.css to the root of your current GitHub repository. Do not delete any existing CSS or JS files. This update assumes immersive.css, refined-hero.css, motion.css, immersive.js, motion.js already exist, along with styles.css, app.js, images, and data.
+Changes only app.js. Adds a separate milk selector (Regular Milk, Lactose-Free Milk, Oat Milk) when Hot Cappuccino is chosen. Existing sweetener dropdown is unchanged. The milk option is included in copy, share, WhatsApp and email orders.
 
-What changed: Removed the duplicative numbered interlude and coffee-film; kept the animated interactive hero, menu, portrait and vault. Removed repeated 01/02/03 labels. The original menu data and vault are not part of this package.
+Installation:
+1. Extract this ZIP.
+2. Copy app.js into the root of your existing dashofespresso GitHub folder, replacing the old app.js.
+3. Commit and Push origin using GitHub Desktop.
+4. Wait for Cloudflare deployment. Then open Hot Cappuccino > Choose + and verify that both Milk preference and Sweetener appear.
 
-GitHub Desktop → Commit → Push origin. Cloudflare Pages retains the same URL/NFC destination.
+No recipes.json, index.html, styling, image, vault or configuration files are changed.
