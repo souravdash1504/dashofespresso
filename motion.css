@@ -41,6 +41,8 @@
 .film-label-top{top:29px;left:36px}.film-label-bottom{bottom:23px;right:28px}
 .barista-portrait{width:100%;max-width:410px;margin:auto;position:relative}
 .portrait-arch{height:420px;background:radial-gradient(circle at 50% 40%,#d3aa7e,#9e7556 69%,#7a5037);border-radius:210px 210px 8px 8px;position:relative;overflow:hidden;display:grid;place-items:center;box-shadow:0 28px 58px #4b321e2b}
+.portrait-arch .barista-photo{display:block;width:100%;height:100%;object-fit:cover;object-position:center 23%;transition:transform .7s cubic-bezier(.22,1,.36,1);filter:saturate(.96)}
+.barista-portrait:hover .barista-photo{transform:scale(1.035)}
 .portrait-arch:after{content:'';position:absolute;inset:21px;border:1px solid #ffebd27f;border-radius:200px 200px 5px 5px}
 .portrait-monogram{font:italic 500 clamp(120px,17vw,220px)/1 'Playfair Display',Georgia,serif;color:#f7dec1;text-shadow:0 9px 30px #3c1d1838}
 .portrait-outline{position:absolute;top:35px;right:35px;color:#fce2c0;font-size:30px}
@@ -50,3 +52,5 @@
 .barista-signoff{display:block;font-size:9px;letter-spacing:.12em;font-weight:700;color:#8d7358;margin-bottom:14px}
 @media(max-width:760px){.coffee-film{grid-template-columns:1fr;padding:70px 22px;gap:26px;min-height:0}.film-heading h2{font-size:clamp(38px,10vw,55px)}.film-stage{height:360px;max-width:500px;margin:0 auto}.film-label-top{top:23px;left:20px}.film-label-bottom{bottom:18px;right:15px}.portrait-arch{height:350px}.barista-portrait{max-width:340px}.story{gap:32px}}
 @media(prefers-reduced-motion:reduce){.entrance-copy,.entrance-art,.motion-reveal,.drink-card,.drink-photo img,.film-stage *{animation:none!important;transition:none!important;transform:none!important}.motion-reveal{opacity:1!important}}
+
+@media(prefers-reduced-motion:reduce){.barista-portrait:hover .barista-photo{transform:none}}
