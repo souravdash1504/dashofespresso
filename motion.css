@@ -1,0 +1,52 @@
+/* Dash of Espresso: intentional motion upgrade — visual only, no menu/vault logic changed. */
+.scroll-progress{position:fixed;top:0;left:0;width:100%;height:3px;pointer-events:none;z-index:100;background:transparent}
+.scroll-progress span{display:block;height:100%;width:100%;background:linear-gradient(90deg,#b98758,#efcba0);transform:scaleX(0);transform-origin:left center;will-change:transform}
+@media(prefers-reduced-motion:no-preference){
+  .entrance-copy{animation:homeEntrance .78s cubic-bezier(.2,.7,.2,1) both}
+  .entrance-art{animation:homeEntrance .9s .13s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes homeEntrance{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+  .motion-reveal.motion-pending{opacity:0;transform:translateY(34px);transition:opacity .68s ease,transform .78s cubic-bezier(.2,.7,.15,1)}
+  .motion-reveal.motion-pending.is-visible{opacity:1;transform:translateY(0)}
+  .drink-card{transition:transform .34s ease,box-shadow .34s ease}
+  .drink-card:hover{transform:translateY(-7px)}
+  .drink-photo img{transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+  .drink-card:hover .drink-photo img{transform:scale(1.035)}
+  .film-stage.is-playing .film-pour{animation:pour 3.6s ease-in-out infinite;transform-origin:center top}
+  .film-stage.is-playing .film-coffee-fill{animation:fill 3.6s ease-in-out infinite;transform-origin:bottom}
+  .film-stage.is-playing .film-crema{animation:crema 3.6s ease-in-out infinite;transform-origin:50% 50%}
+  .film-stage.is-playing .film-steam{animation:steam 3.3s ease-in-out infinite}
+  .film-stage.is-playing .film-steam.s2{animation-delay:-1.35s}
+  .film-stage.is-playing .film-bubble{animation:bubbles 2.8s ease-in-out infinite}
+  .film-stage.is-playing .b2{animation-delay:-1.2s}.film-stage.is-playing .b3{animation-delay:-2s}
+  .film-stage.is-playing .film-orbit{animation:orbit 20s linear infinite}
+  .film-stage.is-playing .orbit-two{animation-direction:reverse;animation-duration:25s}
+  @keyframes pour{0%,13%,91%,100%{opacity:0;stroke-dasharray:0 220}25%,70%{opacity:1;stroke-dasharray:150 220}85%{opacity:.2}}
+  @keyframes fill{0%,15%{transform:scaleY(.35)}68%,90%{transform:scaleY(1)}100%{transform:scaleY(.35)}}
+  @keyframes crema{0%,16%{transform:translateY(75px);opacity:.2}65%,90%{transform:translateY(0);opacity:1}100%{transform:translateY(75px);opacity:.2}}
+  @keyframes steam{0%,100%{opacity:.1;transform:translateY(14px)}50%{opacity:.65;transform:translateY(-6px)}}
+  @keyframes bubbles{0%,100%{opacity:.15;transform:translateY(15px)}50%{opacity:.9;transform:translateY(-8px)}}
+  @keyframes orbit{to{transform:rotate(360deg)}}
+}
+.coffee-film{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(25px,6vw,92px);align-items:center;min-height:590px;padding:86px clamp(24px,8vw,140px);background:#2a1c14;color:#f9f0e4;overflow:hidden}
+.film-heading h2{font:500 clamp(40px,4.9vw,72px)/1.15 'Playfair Display',Georgia,serif;letter-spacing:-.04em;margin:17px 0 24px}
+.film-heading h2 em{font-weight:400;color:#d0a67b}
+.film-heading>p:not(.section-kicker){font-size:14px;max-width:360px;line-height:1.9;color:#d7c6b5}
+.film-heading .section-kicker{color:#d1a97c}
+.film-stage{height:440px;max-width:610px;width:100%;position:relative;overflow:hidden;background:radial-gradient(circle at 48% 43%,#715039 0,#493022 43%,#34231a 100%);border:1px solid #72543f;border-radius:240px 240px 10px 10px;box-shadow:0 25px 65px #0d090733;isolation:isolate}
+.film-orbit{position:absolute;left:10%;top:13%;width:80%;height:80%;border:1px dashed #b68d695c;border-radius:50%;pointer-events:none}
+.film-orbit:before{content:'✳';position:absolute;left:7%;top:11%;color:#d3aa83}
+.orbit-two{left:21%;top:23%;width:58%;height:58%;opacity:.5}
+.coffee-animation{width:100%;height:100%;display:block;position:relative;z-index:1}
+.film-label{position:absolute;z-index:2;font-size:9px;letter-spacing:.2em;color:#efd5b8;font-weight:700}
+.film-label-top{top:29px;left:36px}.film-label-bottom{bottom:23px;right:28px}
+.barista-portrait{width:100%;max-width:410px;margin:auto;position:relative}
+.portrait-arch{height:420px;background:radial-gradient(circle at 50% 40%,#d3aa7e,#9e7556 69%,#7a5037);border-radius:210px 210px 8px 8px;position:relative;overflow:hidden;display:grid;place-items:center;box-shadow:0 28px 58px #4b321e2b}
+.portrait-arch:after{content:'';position:absolute;inset:21px;border:1px solid #ffebd27f;border-radius:200px 200px 5px 5px}
+.portrait-monogram{font:italic 500 clamp(120px,17vw,220px)/1 'Playfair Display',Georgia,serif;color:#f7dec1;text-shadow:0 9px 30px #3c1d1838}
+.portrait-outline{position:absolute;top:35px;right:35px;color:#fce2c0;font-size:30px}
+.portrait-caption{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:14px 0;color:#8c745e;font-size:10px;letter-spacing:.08em}
+.portrait-caption strong{color:#76563f;font-weight:600}
+.story .story-copy p.barista-quote{font-family:Georgia,serif;font-size:15px;line-height:1.7;color:#694530;font-style:italic;border-left:2px solid #cba27b;padding:4px 0 4px 18px;margin:24px 0}
+.barista-signoff{display:block;font-size:9px;letter-spacing:.12em;font-weight:700;color:#8d7358;margin-bottom:14px}
+@media(max-width:760px){.coffee-film{grid-template-columns:1fr;padding:70px 22px;gap:26px;min-height:0}.film-heading h2{font-size:clamp(38px,10vw,55px)}.film-stage{height:360px;max-width:500px;margin:0 auto}.film-label-top{top:23px;left:20px}.film-label-bottom{bottom:18px;right:15px}.portrait-arch{height:350px}.barista-portrait{max-width:340px}.story{gap:32px}}
+@media(prefers-reduced-motion:reduce){.entrance-copy,.entrance-art,.motion-reveal,.drink-card,.drink-photo img,.film-stage *{animation:none!important;transition:none!important;transform:none!important}.motion-reveal{opacity:1!important}}

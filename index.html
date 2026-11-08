@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="motion.css" />
   <style>
     /* Homepage copy only. The public menu, recipe data, and private vault remain unchanged. */
     .hero-copy .hero-tagline {
@@ -55,8 +56,10 @@
   </style>
   <script src="config.js" defer></script>
   <script src="app.js" defer></script>
+  <script src="motion.js" defer></script>
 </head>
 <body>
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgressFill"></span></div>
   <a class="skip" href="#menu">Skip to coffee menu</a>
   <header class="site-header" id="top">
     <a href="#top" class="brand" aria-label="Dash of Espresso, back to top">
@@ -73,7 +76,7 @@
 
   <main>
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
+      <div class="hero-copy entrance-copy">
         <div class="eyebrow"><span class="sparkle">✦</span> DASH OF ESPRESSO · SOURAV’S HOME CAFÉ</div>
         <h1 id="hero-title">Sourav’s home<br><em>coffee bar.</em></h1>
         <p class="hero-tagline">Experimental coffee. Personal favourites. Zero refunds.</p>
@@ -85,7 +88,7 @@
         <p class="hero-disclaimer">If you love it, praise the barista. If you don’t, put on your happiest face and finish the cup anyway. Specialty beans are expensive, and the complaints department is just me.</p>
         <div class="hero-note"><span class="pulse-dot"></span> HANDCRAFTED AT HOME <span class="note-separator">/</span> EVERY CUP EXPERIMENTALLY APPROVED</div>
       </div>
-      <div class="hero-showcase" aria-label="Illustrated specialty iced coffee">
+      <div class="hero-showcase entrance-art" aria-label="Illustrated specialty iced coffee">
         <div class="showcase-frame">
           <div class="showcase-arch">
             <img src="images/hero.svg" width="700" height="800" alt="Illustration of a creamy, layered iced espresso drink" fetchpriority="high" />
@@ -120,9 +123,51 @@
       <p class="results-note" id="resultsNote" role="status"></p>
     </section>
 
+
+    <section class="coffee-film" aria-labelledby="coffee-film-title">
+      <div class="film-heading motion-reveal">
+        <p class="section-kicker">02 — AN EXPERIMENT IN PROGRESS</p>
+        <h2 id="coffee-film-title">A little science.<br><em>A little chaos.</em></h2>
+        <p>Every cup begins with a curious idea. Then the espresso starts flowing.</p>
+      </div>
+      <div class="film-stage motion-reveal" role="img" aria-label="Looping illustration of espresso dripping into a glass, with moving steam and swirling crema">
+        <div class="film-orbit orbit-one" aria-hidden="true"></div>
+        <div class="film-orbit orbit-two" aria-hidden="true"></div>
+        <svg class="coffee-animation" viewBox="0 0 540 440" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="espressoColor" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#b9753e"/><stop offset=".5" stop-color="#7d4628"/><stop offset="1" stop-color="#3a1d15"/></linearGradient>
+            <linearGradient id="glassEdge" x1="0" x2="1"><stop stop-color="#fff6df" stop-opacity=".9"/><stop offset=".5" stop-color="#fff6df" stop-opacity=".13"/><stop offset="1" stop-color="#fff6df" stop-opacity=".66"/></linearGradient>
+            <clipPath id="cupClip"><path d="M168 196 L373 196 L358 363 Q355 378 337 381 H206 Q187 379 183 363 Z"/></clipPath>
+          </defs>
+          <circle cx="270" cy="208" r="166" fill="#ad7952" opacity=".16" />
+          <ellipse cx="270" cy="388" rx="165" ry="14" fill="#100b08" opacity=".3"/>
+          <rect x="156" y="74" width="228" height="54" rx="15" fill="#30211a" stroke="#b58c68" stroke-width="3"/>
+          <rect x="199" y="128" width="143" height="18" rx="6" fill="#a58a70" />
+          <rect x="245" y="143" width="50" height="23" rx="7" fill="#594034" />
+          <path class="film-pour" d="M270 166 C264 210 276 243 270 296" fill="none" stroke="url(#espressoColor)" stroke-width="10" stroke-linecap="round"/>
+          <path d="M168 196 L373 196 L358 363 Q355 378 337 381 H206 Q187 379 183 363 Z" fill="#e5d0b0" opacity=".13" stroke="url(#glassEdge)" stroke-width="8"/>
+          <g clip-path="url(#cupClip)">
+            <rect class="film-coffee-fill" x="171" y="272" width="200" height="115" fill="url(#espressoColor)"/>
+            <path class="film-crema" d="M168 275 Q210 262 251 274 T370 272 L370 293 Q304 283 254 291 T168 287Z" fill="#dba46a" opacity=".96"/>
+            <circle class="film-bubble b1" cx="215" cy="290" r="5" fill="#f0cfaa"/>
+            <circle class="film-bubble b2" cx="306" cy="312" r="3" fill="#f0cfaa"/>
+            <circle class="film-bubble b3" cx="333" cy="296" r="4" fill="#f0cfaa"/>
+          </g>
+          <path d="M198 213 Q198 286 209 351" fill="none" stroke="#fff3dc" stroke-width="8" stroke-linecap="round" opacity=".5"/>
+          <path class="film-steam s1" d="M210 178 Q188 155 207 132 Q226 109 206 88" fill="none" stroke="#f7e2c7" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+          <path class="film-steam s2" d="M325 180 Q347 156 326 136 Q310 116 331 92" fill="none" stroke="#f7e2c7" stroke-width="5" stroke-linecap="round" opacity=".5"/>
+        </svg>
+        <span class="film-label film-label-top">BREWING SOMETHING GOOD ✳</span>
+        <span class="film-label film-label-bottom">HANDCRAFTED · ONE CUP AT A TIME</span>
+      </div>
+    </section>
+
     <section class="story" id="story" aria-labelledby="story-title">
-      <div class="story-illustration"><span aria-hidden="true">☕</span><span class="story-ring">COFFEE IS OUR LOVE LANGUAGE · </span></div>
-      <div class="story-copy"><p class="section-kicker">02 — A NOTE FROM THE BARISTA</p><h2 id="story-title">A café feeling,<br><em>right at home.</em></h2><p>This isn't a commercial café. It's a passion project — a tiny bar dedicated to experimenting with great beans, curious flavours and the joy of making a cup for someone else.</p><a href="#menu" class="story-link">Find your next favourite <span aria-hidden="true">↗</span></a></div>
+      <div class="barista-portrait motion-reveal" aria-label="Portrait space reserved for Sourav's future barista photo">
+        <div class="portrait-arch"><span class="portrait-monogram" aria-hidden="true">S.</span><span class="portrait-outline" aria-hidden="true">✳</span></div>
+        <div class="portrait-caption"><span>THE PERSON BEHIND THE POUR</span><strong>Portrait coming soon</strong></div>
+      </div>
+      <div class="story-copy motion-reveal"><p class="section-kicker">03 — MEET THE BARISTA</p><h2 id="story-title">Meet Sourav.<br><em>Chief coffee overthinker.</em></h2><p>Hi, I'm Sourav. What began as a love for good coffee somehow became a home café, a website, and a suspicious number of experiments with beans, ratios and foam.</p><p>Some ideas are brilliant. Some are questionable. Every cup gets a fair shot — usually a double.</p><p class="barista-quote">If you love it, praise the barista. If you don't, please smile politely. The specialty beans weren't cheap, and the complaints department is just me.</p><span class="barista-signoff">— SOURAV · FOUNDER, HEAD BARISTA &amp; CHIEF TASTE TESTER</span><a href="#menu" class="story-link">Explore the experiments <span aria-hidden="true">↗</span></a></div>
     </section>
   </main>
 
