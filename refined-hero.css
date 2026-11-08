@@ -1,0 +1,69 @@
+/* Refined hero • clean editorial layout, controls never overlap the drink. */
+:root{--heroBorder:#e1c9a6}
+.hero{grid-template-columns:minmax(0, .91fr) minmax(0, 1.09fr);min-height:690px}
+.hero-copy{padding:clamp(54px,6vw,100px) clamp(28px,4.2vw,76px) 60px clamp(25px,7.5vw,125px);justify-content:center}
+.hero-copy h1{font-size:clamp(51px,5.2vw,86px);line-height:1.09;letter-spacing:-.053em;margin:22px 0 23px;max-width:550px}
+.hero-copy .hero-tagline{max-width:360px;font-size:clamp(15px,1.35vw,18px);font-weight:500;letter-spacing:0;line-height:1.65;margin:0;color:#ead8c2}
+.hero-copy .hero-intro,.hero-copy .hero-disclaimer,.hero-copy .hero-note{display:none}
+.hero-copy .hero-actions{margin-top:32px;gap:24px}
+.hero-copy .hero-smallprint{margin-top:46px;color:#ad9983;font-size:11px;letter-spacing:.035em;line-height:1.6}
+.hero-showcase{min-height:690px;height:auto;display:grid;grid-template-rows:minmax(430px, 1fr) auto;padding:0;background:radial-gradient(circle at 50% 28%,#f8e9cc 0,#ebcda6 46%,#cda27d 100%);overflow:hidden}
+.lab-grain{opacity:.12}
+.lab-halo{width:min(74%,420px);top:37%;opacity:.55;box-shadow:0 0 85px 40px #fff1d19b}
+.lab-edition{top:25px;left:27px;font-size:9px;letter-spacing:.19em;color:#79583f}
+.lab-edition-dot{font-size:12px;margin:0 4px}
+.brew-machine{top:3%;width:185px;z-index:4}
+.brew-machine-top{height:59px;border-radius:0 0 21px 21px;font-size:9px}
+.brew-machine-neck{height:18px;width:72px}
+.brew-stream{top:72px;height:130px;width:8px}
+.brew-drop{top:200px}
+.lab-glass-wrap{top:16%;width:min(57%,295px);max-width:295px;z-index:3}
+.lab-orbit{opacity:.31;border-color:#fff9e2a4}
+.lab-star{opacity:.55}
+.lab-steam{top:16%}
+/* The panel participates in grid layout: no absolute overlay on the cup. */
+.lab-controls{position:relative;grid-row:2;left:auto;right:auto;bottom:auto;align-self:end;z-index:8;margin:0 26px 25px;padding:18px 22px 17px;background:#302118f5;border:1px solid #58402b;border-radius:17px;box-shadow:0 13px 25px #55381d2f;backdrop-filter:none}
+.lab-kicker{margin-bottom:5px;font-size:9px;letter-spacing:.15em;color:#cfaa81}
+.lab-controls h2{font-size:clamp(22px,2.25vw,30px);margin:0 0 8px}
+.lab-controls p:not(.lab-kicker){display:none}
+.lab-switches{gap:8px}
+.lab-switch{padding:9px 12px;font-size:11px;border-radius:7px;background:#473327;transition:transform .18s,background .18s}
+.lab-switch:hover{transform:translateY(-2px)}
+.lab-bottom-row{margin-top:11px}
+.lab-again,.lab-menu-link{font-size:11px}
+.lab-glass-wrap svg{display:block}
+/* Calmer and smaller intermediate moment: the drinks remain the highlight. */
+.brew-interlude{min-height:270px;padding:44px 20px}
+.interlude-title{font-size:clamp(37px,4.7vw,68px);margin:14px 0 9px}
+.interlude-sub{margin:0}
+@media (min-width:761px) and (max-width:1100px){.hero{grid-template-columns:minmax(0, 1fr) minmax(0, 1fr)}.hero-copy{padding-left:5vw;padding-right:22px}.hero-showcase{min-height:700px}.lab-glass-wrap{width:min(68%,280px)}.lab-controls{margin:0 16px 18px;padding:17px 15px}}
+@media(max-width:760px){
+ .hero{display:flex;flex-direction:column;min-height:auto}
+ .hero-copy{padding:55px 24px 39px;min-height:auto}
+ .hero-copy h1{font-size:clamp(47px,11vw,70px);margin:19px 0 16px;line-height:1.11}
+ .hero-copy .hero-tagline{max-width:340px;font-size:15px;line-height:1.55}
+ .hero-copy .hero-actions{margin-top:25px;gap:20px}
+ .hero-copy .hero-smallprint{margin-top:24px;font-size:10px}
+ .hero-showcase{height:auto;min-height:635px;grid-template-rows:minmax(405px,1fr) auto;padding:0}
+ .brew-machine{top:0;width:163px;transform:translateX(-50%)}
+ .brew-machine-top{height:56px}
+ .brew-machine-neck{height:18px}
+ .brew-stream{top:69px;height:130px}
+ .brew-drop{top:187px}
+ .lab-glass-wrap{top:14%;width:min(74%,285px);max-width:285px;transform:translate(-50%,clamp(-9px,var(--labScroll),9px)) rotate(var(--labTilt))}
+ .lab-edition{top:14px;left:20px}
+ .lab-controls{margin:0 17px 18px;padding:17px 17px 15px;border-radius:15px}
+ .lab-controls h2{font-size:25px}
+ .lab-switch{font-size:11px;padding:9px 12px}
+ .lab-bottom-row{flex-direction:row;align-items:center;gap:9px}
+ .lab-steam{top:17%}
+}
+@media(max-width:390px){
+ .hero-showcase{min-height:595px;grid-template-rows:minmax(375px,1fr) auto}
+ .lab-glass-wrap{top:15%;width:min(74%,265px)}
+ .lab-controls{margin:0 12px 13px;padding:14px 12px}
+ .lab-switches{gap:5px}.lab-switch{font-size:10px;padding:8px 9px}
+ .lab-controls h2{font-size:23px}
+ .lab-bottom-row{flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce){.lab-glass-wrap{transform:translate(-50%,0)!important}.lab-switch{transition:none!important}}

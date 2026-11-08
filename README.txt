@@ -1,5 +1,17 @@
-Dash of Espresso — Meet the Barista portrait update
+DASH OF ESPRESSO — REFINED HERO UPDATE
 
-Copy index.html, motion.css and images/sourav-barista.webp into your current GitHub repository root, preserving the folder structure. Replace index.html and motion.css. Commit and Push origin in GitHub Desktop. The rest of your site, immersive animations, recipes, NFC URL, and encrypted vault files do not need changing.
+Changes:
+- Shorter minimalist homepage message and calmer layout.
+- Interactive cup fully visible with a separate controls panel (no overlap).
+- Existing 3 coffee selectors and replay button remain functional.
+- Current barista photo and Meet the Barista section remain intact.
+- Menu, private vault, NFC URL, recipes, images all remain unchanged.
 
-Important: This update assumes you have already installed the earlier immersive homepage update. If you have not, install that first.
+HOW TO INSTALL:
+1. Extract this archive.
+2. Copy index.html and refined-hero.css into the ROOT of your current GitHub repository.
+3. Keep existing styles.css, immersive.css, immersive.js, motion.css, motion.js, app.js, data/, images/ and vault files.
+4. In GitHub Desktop commit and push to origin, then refresh the Cloudflare page.
+5. If the old page is cached, refresh with browser cache bypass/reload.
+
+This patch assumes you already installed the immersive website and barista photo updates.
