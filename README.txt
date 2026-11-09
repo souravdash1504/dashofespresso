@@ -1,11 +1,7 @@
-Dash of Espresso — Hot Cappuccino milk options update
+Dash of Espresso — machine label alignment fix
 
-Changes only app.js. Adds a separate milk selector (Regular Milk, Lactose-Free Milk, Oat Milk) when Hot Cappuccino is chosen. Existing sweetener dropdown is unchanged. The milk option is included in copy, share, WhatsApp and email orders.
+Replace ONLY immersive.css at the repository root with the file in this package.
+This removes the redundant floating EST. AT HOME / THE COFFEE LAB caption which overlaps the animated machine on mobile and desktop.
+Everything else remains as in your current immersive.css: coffee animation, controls, recipes, barista portrait, and vault are not modified.
 
-Installation:
-1. Extract this ZIP.
-2. Copy app.js into the root of your existing dashofespresso GitHub folder, replacing the old app.js.
-3. Commit and Push origin using GitHub Desktop.
-4. Wait for Cloudflare deployment. Then open Hot Cappuccino > Choose + and verify that both Milk preference and Sweetener appear.
-
-No recipes.json, index.html, styling, image, vault or configuration files are changed.
+GitHub Desktop: Commit to main → Push origin. Refresh the site after Cloudflare deploys.

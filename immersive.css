@@ -65,3 +65,8 @@ html{scroll-padding-top:24px}
 @media(max-width:760px){.hero{display:flex;flex-direction:column;min-height:0}.hero-copy{padding:55px 22px 45px}.hero-copy h1{font-size:clamp(49px,12.1vw,74px)}.hero-showcase{height:650px;min-height:650px}.brew-machine{top:1%;transform:translateX(-50%) scale(.86);transform-origin:top}.lab-glass-wrap{width:360px;max-width:80%;top:21%}.lab-controls{bottom:14px}.lab-edition{top:16px;left:19px}.lab-halo{top:34%}.brew-interlude{min-height:330px}.interlude-title{font-size:clamp(38px,10vw,65px)}.lab-steam{top:18%}}
 @media(max-width:410px){.hero-showcase{height:610px;min-height:610px}.lab-glass-wrap{top:19%;width:305px}.lab-controls{padding:16px 14px;bottom:10px}.lab-switch{padding:8px;font-size:10px}.lab-bottom-row{flex-direction:column;align-items:flex-start}.lab-controls h2{font-size:27px}}
 @media(prefers-reduced-motion:reduce){.brew-stream i,.brew-drop,.machine-dot,.lab-glass-wrap *,.lab-star,.lab-steam,.lab-orbit,.kinetic-track,.interlude-arrow,.interlude-bean{animation:none!important}.hero-showcase.is-pouring .liquid{animation:none!important;transform:scaleY(1)!important}.menu-section .drink-card:hover{transform:none}.lab-glass-wrap{transition:none}}
+
+
+/* FIX 2026-11-09: Floating caption overlapped the espresso machine on both desktop and mobile.
+   The machine already carries the DASH / ESPRESSO wordmark, so remove duplicate decorative text. */
+.hero-showcase .lab-edition { display: none !important; }
