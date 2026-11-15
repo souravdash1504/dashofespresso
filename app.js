@@ -143,13 +143,6 @@
       const photo = el("div", "drink-photo");
       photo.append(createImage(drink.image, `Coffee drink: ${drink.name}`, "drink-image"));
       if (drink.badge) photo.append(el("span", "drink-badge", drink.badge));
-      if (videoFor(drink)) {
-        const play = el("button", "drink-video-button", "▶  Watch how it's made");
-        play.type = "button";
-        play.setAttribute("aria-label", `Watch how ${drink.name} is made`);
-        play.addEventListener("click", () => openCoffeeVideo(drink));
-        photo.append(play);
-      }
       card.append(photo);
       const info = el("div", "drink-info");
       appendText(info, "p", "drink-category", (drink.categories || ["Coffee"])[0].toUpperCase() + " · " + (drink.serve || "300 ml"));
@@ -162,7 +155,16 @@
       const orderBtn = el("button", "order-button", "Choose +"); orderBtn.type="button";
       orderBtn.setAttribute("aria-label", `Choose ${drink.name}`);
       orderBtn.addEventListener("click", () => openOrder(drink));
-      actions.append(recipeBtn, orderBtn); info.append(actions); card.append(info);
+      actions.append(recipeBtn, orderBtn);
+      info.append(actions);
+      if (videoFor(drink)) {
+        const videoBtn = el("button", "watch-video-inline", "▶  Watch how it's made");
+        videoBtn.type = "button";
+        videoBtn.setAttribute("aria-label", `Watch how ${drink.name} is made`);
+        videoBtn.addEventListener("click", () => openCoffeeVideo(drink));
+        info.append(videoBtn);
+      }
+      card.append(info);
       card.style.setProperty("--index", Math.min(index, 8));
       grid.append(card);
     });

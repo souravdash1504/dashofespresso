@@ -27,3 +27,28 @@
 .coffee-video-frame video{display:block;width:auto;max-width:100%;max-height:min(69dvh,650px);aspect-ratio:512/910;border-radius:8px;background:#120c08;object-fit:contain}
 .coffee-video-caption{margin:0;color:#cfb79c;font-size:12px;text-align:center}
 @media(prefers-reduced-motion:reduce){.drink-video-button{transition:none;transform:none}}
+
+/* Visible, accessible video action below the existing recipe and order controls. */
+.drink-info .watch-video-inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 43px;
+  margin-top: 12px;
+  padding: 11px 14px;
+  background: #eee0cf;
+  border: 1px solid #bb997a;
+  border-radius: 4px;
+  color: #4b301f;
+  font: 700 12px/1.3 'DM Sans', Arial, sans-serif;
+  letter-spacing: .015em;
+  cursor: pointer;
+  transition: background-color .2s ease, transform .2s ease;
+}
+.drink-info .watch-video-inline:hover {background: #dfc9ad; transform: translateY(-2px)}
+.drink-info .watch-video-inline:focus-visible {outline: 3px solid #8b603c; outline-offset: 3px}
+@media(max-width:760px) {
+  .drink-info .watch-video-inline {margin-top: 10px; padding: 10px 5px; font-size: 10px; min-height: 42px}
+}
+@media(prefers-reduced-motion:reduce) { .drink-info .watch-video-inline {transition:none;transform:none} }

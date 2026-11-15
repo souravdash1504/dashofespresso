@@ -1,24 +1,25 @@
-DASH OF ESPRESSO — COFFEE LAB (IMMERSIVE HERO)
+DASH OF ESPRESSO — ALWAYS VISIBLE SUNSET VIDEO BUTTON FIX
 
 What changed:
-- FIRST screen now includes animated espresso stream, moving coffee/crema/ice, rising steam, rotating ornaments, and a coffee lab panel.
-- Three WORKING drink-preview buttons: Espresso, Sunset, Cloud latte. Their visual drink colours / garnishes change and the pour restarts.
-- Working “Pour another shot” replay button.
-- Animated full-width typography ticker, scroll-responsive coffee-glass motion, and a bold intermediate section before the menu.
-- Previously added espresso animation below the menu and the Meet Sourav portrait placeholder remain.
-- Respects reduced-motion accessibility preference.
+- Sunset Americano shows an always-visible "Watch how it's made" button BELOW View recipe / Choose + on desktop and mobile.
+- Video plays in a popup on click, and stops when closed.
+- Existing milk-and-sweetener options for Hot Cappuccino are preserved.
+- No homepage, recipe data, barista portrait, or vault files are modified.
 
-INSTALL:
+Install:
 1. Extract this ZIP.
-2. In GitHub Desktop choose Repository > Show in Explorer.
-3. Copy these FIVE files directly into your repo root:
-   index.html, motion.css, motion.js, immersive.css, immersive.js
-4. Replace existing index.html and motion.* if asked.
-5. Commit and Push origin; wait until Cloudflare Pages finishes deployment.
-6. Test the website in a PRIVATE browser tab, on phone and computer. Hard refresh if old content is cached.
+2. Open GitHub Desktop > Repository > Show in Explorer.
+3. Copy app.js and video-player.css into the repository root (replace both if prompted).
+4. Copy images/sunset-video-poster.jpg into images/ and videos/sunset-americano.mp4 into videos/.
+   These folders must stay in the root of the website, next to app.js and index.html.
+5. Commit "Make Sunset Americano video button always visible" and Push origin.
+6. Wait for the new Cloudflare deployment. Hard-refresh with Ctrl+Shift+R on desktop;
+   on phone, try a private/incognito tab if you still see the old JavaScript.
+7. Find Sunset Americano. A Watch how it's made button should appear BELOW the other two actions.
 
-IMPORTANT: Do NOT delete or replace your pre-existing styles.css, app.js, config.js, data/recipes.json, images/, vault.html, vault.js, vault.css or encrypted vault file.
-All these dependencies remain in their original paths.
-Your NFC URL remains exactly the same.
+If the button still does not appear:
+- Open https://dash-of-espresso.pages.dev/app.js in your browser and search for "watch-video-inline".
+- If it is absent, the newer app.js has not been deployed or an old cached file is being served.
+- Open https://dash-of-espresso.pages.dev/videos/sunset-americano.mp4 to confirm the video is available.
 
-Note: This is a true, code-driven animation, not a prerecorded video. No image, audio or animation library downloads are required.
+Note: Uploaded video may contain copyrighted/licensed audio; only publish audio you have rights to use outside Instagram.
