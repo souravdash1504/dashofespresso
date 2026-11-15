@@ -1,0 +1,29 @@
+/* Dash of Espresso — optional preparation videos. Loaded via app.js. */
+.drink-photo{position:relative;overflow:hidden}
+.drink-video-button{
+  position:absolute;z-index:3;bottom:12px;left:12px;right:12px;
+  border:1px solid rgba(255,245,229,.42);background:rgba(36,23,16,.90);
+  color:#fff8ee;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-radius:999px;min-height:43px;padding:10px 14px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  font:700 12px/1.25 'DM Sans',Arial,sans-serif;letter-spacing:.025em;
+  box-shadow:0 6px 22px #190e0860;cursor:pointer;
+  opacity:0;transform:translateY(9px);transition:opacity .22s ease,transform .22s ease,background .22s;
+}
+.drink-card:hover .drink-video-button,.drink-card:focus-within .drink-video-button,
+.drink-video-button:focus-visible{opacity:1;transform:translateY(0)}
+.drink-video-button:hover{background:#60402c}
+@media(hover:none),(pointer:coarse){.drink-video-button{opacity:1;transform:none;left:8px;right:8px;bottom:8px;font-size:10px;min-height:39px;padding:9px 6px}}
+.recipe-watch-button{display:block;width:100%;min-height:46px;margin-top:12px;background:transparent;border:1px solid #b18a66;border-radius:4px;color:#543b27;font-weight:700;font-size:13px;cursor:pointer}
+.recipe-watch-button:hover{background:#ede1d0}
+.coffee-video-dialog{border:0;padding:0;width:min(480px,calc(100vw - 24px));max-height:min(94dvh,850px);color:#f5e9d6;background:#251910;box-shadow:0 28px 90px #0009;border-radius:14px;overflow:auto}
+.coffee-video-dialog::backdrop{background:rgba(15,8,5,.82);backdrop-filter:blur(6px)}
+.coffee-video-shell{padding:clamp(14px,3vw,24px);display:flex;flex-direction:column;gap:15px}
+.coffee-video-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.coffee-video-header p{color:#c9a17c;font-size:10px;font-weight:700;letter-spacing:.22em;margin:0 0 5px}
+.coffee-video-header h2{font:400 clamp(22px,4vw,30px)/1.16 'Playfair Display',Georgia,serif;margin:0}
+.coffee-video-close{width:40px;height:40px;flex:0 0 40px;border-radius:50%;border:1px solid #8a6b51;background:#422d20;color:#fff2df;font-size:26px;line-height:1;cursor:pointer}
+.coffee-video-frame{display:flex;justify-content:center;min-height:100px}
+.coffee-video-frame video{display:block;width:auto;max-width:100%;max-height:min(69dvh,650px);aspect-ratio:512/910;border-radius:8px;background:#120c08;object-fit:contain}
+.coffee-video-caption{margin:0;color:#cfb79c;font-size:12px;text-align:center}
+@media(prefers-reduced-motion:reduce){.drink-video-button{transition:none;transform:none}}

@@ -9,6 +9,80 @@
   const state = { drinks: [], category: "All", query: "", activeDrink: null };
   const categories = ["All", "Iced", "Hot", "Dessert", "Signature", "Fruity"];
   const imageFallback = "images/coffee-default.svg";
+  // Add further drink videos here or specify a `video` path in recipes.json.
+  const defaultVideos = {
+    "sunset-americano": {
+      src: "videos/sunset-americano.mp4",
+      poster: "images/sunset-video-poster.jpg"
+    }
+  };
+  const videoFor = drink => {
+    if (drink.video && typeof drink.video === "string" && /^videos\/[a-z0-9_.-]+\.mp4$/i.test(drink.video)) {
+      return {src: drink.video, poster: drink.videoPoster || drink.image};
+    }
+    return defaultVideos[drink.id] || null;
+  };
+  let videoDialog = null;
+  let videoPlayer = null;
+  let videoReturnFocus = null;
+  function ensureVideoUI() {
+    if (videoDialog) return;
+    const style = document.createElement("link");
+    style.rel = "stylesheet";
+    style.href = "video-player.css";
+    document.head.append(style);
+    const dialog = document.createElement("dialog");
+    dialog.id = "coffeeVideoDialog";
+    dialog.className = "coffee-video-dialog";
+    dialog.setAttribute("aria-labelledby", "coffeeVideoTitle");
+    dialog.innerHTML = `<div class="coffee-video-shell">
+      <header class="coffee-video-header"><div><p>BEHIND THE CUP</p><h2 id="coffeeVideoTitle">How it's made</h2></div>
+      <button type="button" class="coffee-video-close" aria-label="Close video">×</button></header>
+      <div class="coffee-video-frame"></div>
+      <p class="coffee-video-caption">Made at Sourav's home coffee bar. ☕</p>
+    </div>`;
+    document.body.append(dialog);
+    videoDialog = dialog;
+    dialog.querySelector(".coffee-video-close").addEventListener("click", closeCoffeeVideo);
+    dialog.addEventListener("click", event => { if (event.target === dialog) closeCoffeeVideo(); });
+    dialog.addEventListener("close", cleanupCoffeeVideo);
+  }
+  function cleanupCoffeeVideo() {
+    if (videoPlayer) {
+      videoPlayer.pause();
+      videoPlayer.removeAttribute("src");
+      videoPlayer.load();
+      videoPlayer.remove();
+      videoPlayer = null;
+    }
+    if (videoReturnFocus && videoReturnFocus.isConnected) videoReturnFocus.focus({preventScroll:true});
+    videoReturnFocus = null;
+  }
+  function closeCoffeeVideo() {
+    if (videoDialog && videoDialog.open) videoDialog.close();
+  }
+  function openCoffeeVideo(drink) {
+    const asset = videoFor(drink);
+    if (!asset) return;
+    ensureVideoUI();
+    // Keep only one player active, even when another clip is selected.
+    cleanupCoffeeVideo();
+    videoReturnFocus = document.activeElement;
+    videoDialog.querySelector("#coffeeVideoTitle").textContent = drink.name;
+    videoPlayer = document.createElement("video");
+    videoPlayer.controls = true;
+    videoPlayer.playsInline = true;
+    videoPlayer.preload = "metadata";
+    videoPlayer.poster = asset.poster || "";
+    videoPlayer.src = asset.src;
+    videoPlayer.setAttribute("aria-label", `${drink.name} preparation video`);
+    videoDialog.querySelector(".coffee-video-frame").replaceChildren(videoPlayer);
+    if (!videoDialog.open) videoDialog.showModal();
+    // Playback follows an intentional click, never page load.
+    const attempt = videoPlayer.play();
+    if (attempt && typeof attempt.catch === "function") attempt.catch(() => { /* User can tap Play using native controls. */ });
+  }
+
 
   const el = (tag, className, text) => {
     const node = document.createElement(tag);
@@ -69,6 +143,13 @@
       const photo = el("div", "drink-photo");
       photo.append(createImage(drink.image, `Coffee drink: ${drink.name}`, "drink-image"));
       if (drink.badge) photo.append(el("span", "drink-badge", drink.badge));
+      if (videoFor(drink)) {
+        const play = el("button", "drink-video-button", "▶  Watch how it's made");
+        play.type = "button";
+        play.setAttribute("aria-label", `Watch how ${drink.name} is made`);
+        play.addEventListener("click", () => openCoffeeVideo(drink));
+        photo.append(play);
+      }
       card.append(photo);
       const info = el("div", "drink-info");
       appendText(info, "p", "drink-category", (drink.categories || ["Coffee"])[0].toUpperCase() + " · " + (drink.serve || "300 ml"));
@@ -104,7 +185,14 @@
     appendText(panel, "p", "recipe-disclaimer", "One double-shot espresso is used per coffee. Ice is added to suit the glass; espresso yield may vary by machine.");
     const button = el("button", "button button-dark recipe-order", "I'd love this one ↗");
     button.type = "button"; button.addEventListener("click", () => { closeDialog($("#recipeDialog")); openOrder(drink); });
-    panel.append(button); showDialog($("#recipeDialog"));
+    panel.append(button);
+    if (videoFor(drink)) {
+      const watch = el("button", "recipe-watch-button", "▶  Watch how it's made");
+      watch.type = "button";
+      watch.addEventListener("click", () => { closeDialog($("#recipeDialog")); openCoffeeVideo(drink); });
+      panel.append(watch);
+    }
+    showDialog($("#recipeDialog"));
   }
   function openOrder(drink) {
     state.activeDrink = drink;
@@ -196,6 +284,7 @@
     });
   }
   async function boot() {
+    ensureVideoUI();
     document.querySelectorAll("[data-close]").forEach(button => button.addEventListener("click", () => closeDialog(document.getElementById(button.dataset.close))));
     [$("#recipeDialog"), $("#orderDialog")].forEach(dialog => dialog.addEventListener("click", event => { if (event.target === dialog) closeDialog(dialog); }));
     searchInput.addEventListener("input", () => { state.query = searchInput.value.trim().toLowerCase(); renderDrinks(); });
