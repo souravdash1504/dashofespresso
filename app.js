@@ -14,6 +14,14 @@
     "sunset-americano": {
       src: "videos/sunset-americano.mp4",
       poster: "images/sunset-video-poster.jpg"
+    },
+    "classic-affogato": {
+      src: "videos/classic-affogato.mp4",
+      poster: "images/classic-affogato-video-poster.jpg"
+    },
+    "fridge-cigarette": {
+      src: "videos/fridge-cigarette.mp4",
+      poster: "images/fridge-cigarette-video-poster.jpg"
     }
   };
   const videoFor = drink => {
